@@ -6,21 +6,26 @@ import com.exercise.base.Field;
 import com.exercise.base.Sys;
 import com.exercise.base.Type;
 
-public class SpaceBuilder {
+public class AssetBuilder {
+
 	private String title;
-	private String description;
+	private String contentType;
+	private String fileName;
+	private String upload;
 	
-	private Type type = Type.SPACE;
+	private Type type = Type.ASSET;
 	private String id;
 	private Date createdAt;
 	private String createdBy;
 	private Date updatedAt;
 	private String updatedBy;
 	
-	public SpaceBuilder(String title, String description, String id, Date createdAt, String createdBy,
-			Date updatedAt, String updatedBy) {
+	public AssetBuilder(String title, String contentType, String fileName, String upload, String id, Date createdAt,
+			String createdBy, Date updatedAt, String updatedBy) {
 		this.title = title;
-		this.description = description;
+		this.contentType = contentType;
+		this.fileName = fileName;
+		this.upload = upload;
 		this.id = id;
 		this.createdAt = createdAt;
 		this.createdBy = createdBy;
@@ -28,11 +33,13 @@ public class SpaceBuilder {
 		this.updatedBy = updatedBy;
 	}
 	
-	public Item createSpaceItem() {
+	public Item createAssetItem() {
 		return new Item(
 				new Field.FieldBuilder(title)
-				.withDescription(description)
-				.build(), 
+				.withContentType(contentType)
+				.withFileName(fileName)
+				.withUpload(upload)
+				.build(),
 				
 				new Sys.SysBuilder(type)
 				.withId(id)

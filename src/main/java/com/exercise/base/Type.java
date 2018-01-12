@@ -1,5 +1,7 @@
 package com.exercise.base;
 
+import com.fasterxml.jackson.annotation.JsonValue;
+
 public enum Type {
 	
 	SPACE("Space"),
@@ -7,13 +9,14 @@ public enum Type {
 	ASSET("Asset"),
 	USER("User");
 	
-	Type(String type) {
-		this.type = type;
+	Type(String name) {
+		this.name = name;
 	}
 	
-	private final String type;
+	private final String name;
 	
+	@JsonValue
 	public String getType() {
-		return type;
+		return name;
 	}
 }
