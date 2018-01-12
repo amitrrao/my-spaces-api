@@ -23,6 +23,10 @@ public class Sys {
 		this.updatedBy = updatedBy;
 	}
 	
+	public Sys(Type type) {
+		this.type = type;
+	}
+	
 	public Type getType() {
 		return type;
 	}
@@ -59,4 +63,47 @@ public class Sys {
 	public void setUpdatedBy(String updatedBy) {
 		this.updatedBy = updatedBy;
 	}
+	
+	public static class SysBuilder {
+		private Type nestedType;
+		private String nestedId;
+		private String nestedCreatedBy;
+		private Date nestedCreatedAt;
+		private Date nestedUpdatedAt;
+		private String nestedUpdatedBy;
+		
+		public SysBuilder(Type type) {
+			this.nestedType = type;
+		}
+		
+		public SysBuilder withId(String id) {
+			this.nestedId = id;
+			return this;
+		}
+		
+		public SysBuilder withCreatedBy(String createdBy) {
+			this.nestedCreatedBy = createdBy;
+			return this;
+		}
+		
+		public SysBuilder withCreatedAt(Date createdAt) {
+			this.nestedCreatedAt = createdAt;
+			return this;
+		}
+		
+		public SysBuilder withUpdatedBy(String updatedBy) {
+			this.nestedUpdatedBy = updatedBy;
+			return this;
+		}
+		
+		public SysBuilder withUpatedAt(Date updatedAt) {
+			this.nestedUpdatedAt = updatedAt;
+			return this;
+		}
+		
+		public Sys build() {
+			return new Sys(this.nestedType, this.nestedId, this.nestedCreatedAt, this.nestedCreatedBy, this.nestedUpdatedAt, this.nestedUpdatedBy);
+		}
+	}
+	
 }

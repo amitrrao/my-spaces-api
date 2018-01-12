@@ -55,8 +55,4 @@ public class SpaceController {
 	public Item getAssetBySpaceIdAndAssetId(@PathVariable String spaceId, @PathVariable String assetId) {
 		return assetService.getAssetBySpaceIdAndAssetId(spaceId, assetId);
 	}
-
-//	public ResponseEntity<Object> getErrorMessage() {
-//		return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-//	}
 }
