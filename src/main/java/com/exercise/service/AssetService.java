@@ -10,7 +10,7 @@ import com.exercise.item.Item;
 /**
  * 
  * AssetService is a service class that implements REST methods for Asset related information.
- * All the data for this class is coming from TestDataOld. In production, it would ideally come from a database.
+ * All the data for this class is coming from TestData. In production, it would ideally come from a database.
  * 
  */
 @Service
