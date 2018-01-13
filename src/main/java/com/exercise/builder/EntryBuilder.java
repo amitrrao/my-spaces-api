@@ -7,6 +7,11 @@ import com.exercise.base.Sys;
 import com.exercise.base.Type;
 import com.exercise.item.Item;
 
+/**
+ * 
+ * This is the EntryBuilder class that is responsible for building an Entry instance.
+ *
+ */
 public class EntryBuilder implements Builder {
 
 	private String title;

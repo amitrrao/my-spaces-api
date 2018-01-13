@@ -10,6 +10,11 @@ import org.springframework.stereotype.Service;
 import com.exercise.builder.AssetBuilder;
 import com.exercise.item.Item;
 
+/**
+ * 
+ * AssetService is a service class that implements REST methods for Asset related information.
+ *
+ */
 @Service
 public class AssetService {
 	
@@ -46,11 +51,23 @@ public class AssetService {
 					"4FLrUHftHW3v2BLi9fzfjU2").build()
 			));
 			
-	
+	/**
+	 * A method to get all assets for a given spaceId.
+	 * 
+	 * @param spaceId
+	 * @return a list of all Asset instances.
+	 */
 	public List<Item> getAllAssetsBySpace(String spaceId) {
 		return assets;
 	}
 	
+	/**
+	 * A method to get an asset given a spaceId and an assetId.
+	 * 
+	 * @param spaceId
+	 * @param assetId
+	 * @return a single Asset instance
+	 */
 	public Item getAssetBySpaceIdAndAssetId(String spaceId, String assetId) {
 		return assets.stream().filter(a -> a.getSys()
 				.getId()

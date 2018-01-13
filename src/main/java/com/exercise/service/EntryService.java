@@ -10,6 +10,11 @@ import org.springframework.stereotype.Service;
 import com.exercise.builder.EntryBuilder;
 import com.exercise.item.Item;
 
+/**
+ * 
+ * EntryService is a service class that implements REST methods for Entry related information.
+ *
+ */
 @Service
 public class EntryService {
 	
@@ -43,10 +48,23 @@ public class EntryService {
 					"4FLrUHftHW3v2BLi9fzfjU2").build()
 			));
 	
+	/**
+	 * A method to get all entries for a given spaceId.
+	 * 
+	 * @param spaceId
+	 * @return a list of all Entry instances.
+	 */
 	public List<Item> getAllEntriesBySpace(String spaceId) {
 		return entries;
 	}
 	
+	/**
+	 * A method to get an entry given a spaceId and an entryId.
+	 * 
+	 * @param spaceId
+	 * @param entryId
+	 * @return a single Entry instance
+	 */
 	public Item getEntryBySpaceIdAndEntryId(String spaceId, String entryId) {
 		return entries.stream().filter(e -> e.getSys()
 				.getId()

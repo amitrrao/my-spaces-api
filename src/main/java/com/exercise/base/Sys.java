@@ -2,15 +2,28 @@ package com.exercise.base;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
+/**
+ * 
+ * This is a Sys class, that contains all the system specific information for an Item in our API.
+ *
+ * This class also has a static inner class called SysBuilder that builds a Sys instance.
+ * Hence, there are only getters for the instance variables.
+ * 
+ */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Sys {
 	
 	private Type type;
 	private String id;
+	@JsonFormat
+    (shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
 	private Date createdAt;
 	private String createdBy;
+	@JsonFormat
+    (shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
 	private Date updatedAt;
 	private String updatedBy;
 	
@@ -30,40 +43,27 @@ public class Sys {
 	public Type getType() {
 		return type;
 	}
-	public void setType(Type type) {
-		this.type = type;
-	}
 	public String getId() {
 		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
 	}
 	public Date getCreatedAt() {
 		return createdAt;
 	}
-	public void setCreatedAt(Date createdAt) {
-		this.createdAt = createdAt;
-	}
 	public String getCreatedBy() {
 		return createdBy;
-	}
-	public void setCreatedBy(String createdBy) {
-		this.createdBy = createdBy;
 	}
 	public Date getUpdatedAt() {
 		return updatedAt;
 	}
-	public void setUpdatedAt(Date updatedAt) {
-		this.updatedAt = updatedAt;
-	}
 	public String getUpdatedBy() {
 		return updatedBy;
 	}
-	public void setUpdatedBy(String updatedBy) {
-		this.updatedBy = updatedBy;
-	}
 	
+	/**
+	 * 
+	 * Static inner class that is responsible for building a Sys instance.
+	 *
+	 */
 	public static class SysBuilder {
 		private Type nestedType;
 		private String nestedId;

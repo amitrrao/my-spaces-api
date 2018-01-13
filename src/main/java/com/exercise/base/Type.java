@@ -2,6 +2,11 @@ package com.exercise.base;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 
+/**
+ * 
+ * Type is an enum representing all possible types for a 'Item'.
+ *
+ */
 public enum Type {
 	
 	SPACE("Space"),

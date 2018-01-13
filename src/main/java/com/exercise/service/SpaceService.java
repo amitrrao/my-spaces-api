@@ -10,6 +10,11 @@ import org.springframework.stereotype.Service;
 import com.exercise.builder.SpaceBuilder;
 import com.exercise.item.Item;
 
+/**
+ * 
+ * SpaceService is a service class that implements REST methods for Space related information.
+ *
+ */
 @Service
 public class SpaceService {
 
@@ -40,10 +45,21 @@ public class SpaceService {
 					"4FLrUHftHW3v2BLi9fzfjU").build()
 			));
 	
+	/**
+	 * A method to get all spaces in the system
+	 * 
+	 * @return a list of all Space instances
+	 */
 	public List<Item> getAllSpaces() {
 		return spaces;
 	}
 	
+	/**
+	 * A method to get a space given a spaceId.
+	 * 
+	 * @param spaceId
+	 * @return a single Space instance
+	 */
 	public Item getSpace(String spaceId) {
 		return spaces.stream().filter(s -> s.getSys()
 				.getId()
