@@ -13,7 +13,6 @@ import com.exercise.builder.UserBuilder;
 import com.exercise.item.Item;
 
 public class TestData {
-	
 	/**
 	 * Test data for Spaces.
 	 */
