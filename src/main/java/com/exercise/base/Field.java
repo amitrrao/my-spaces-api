@@ -2,6 +2,14 @@ package com.exercise.base;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
+/**
+ * 
+ * This is a Field class representing all possible fields for an Item in our API.
+ * 
+ * This class also has a static inner class called FieldBuilder that builds a Field instance.
+ * Hence, there are only getters for the instance variables.
+ * 
+ */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Field {
 	
@@ -24,64 +32,42 @@ public class Field {
 		this.contentType = nestedContentType;
 		this.fileName = nestedFileName;
 		this.upload = nestedUpload;
-		this.setName(nestedName);
+		this.name = nestedName;
 		this.role = nestedRole;
 	}
 	public String getTitle() {
 		return title;
 	}
-	public void setTitle(String title) {
-		this.title = title;
-	}
 	public String getDescription() {
 		return description;
-	}
-	public void setDescription(String description) {
-		this.description = description;
 	}
 	public String getSummary() {
 		return summary;
 	}
-	public void setSummary(String summary) {
-		this.summary = summary;
-	}
 	public String getBody() {
 		return body;
-	}
-	public void setBody(String body) {
-		this.body = body;
 	}
 	public String getContentType() {
 		return contentType;
 	}
-	public void setContentType(String contentType) {
-		this.contentType = contentType;
-	}
 	public String getFileName() {
 		return fileName;
-	}
-	public void setFileName(String fileName) {
-		this.fileName = fileName;
 	}
 	public String getUpload() {
 		return upload;
 	}
-	public void setUpload(String upload) {
-		this.upload = upload;
-	}
 	public Role getRole() {
 		return role;
-	}
-	public void setRole(Role role) {
-		this.role = role;
 	}
 	public String getName() {
 		return name;
 	}
-	public void setName(String name) {
-		this.name = name;
-	}
 
+	/**
+	 * 
+	 * Static inner class that is responsible for building a Field instance.
+	 *
+	 */
 	public static class FieldBuilder {
 		private String nestedTitle;
 		private String nestedDescription;

@@ -2,6 +2,8 @@ package com.exercise.controller;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +15,12 @@ import com.exercise.service.EntryService;
 import com.exercise.service.SpaceService;
 import com.exercise.service.UserService;
 
+/**
+ * 
+ * This is our Controller class that maps incoming REST calls to appropriate service methods.
+ * It injects singletons for the service instances and calls methods on them based on the request mapping.
+ * 
+ */
 @RestController
 public class SpaceController { //implements ErrorController {
 
@@ -28,6 +36,8 @@ public class SpaceController { //implements ErrorController {
 	
 	@RequestMapping("/spaces")
 	public List<Item> getAllSpaces() {
+		final Logger logger = LoggerFactory.getLogger(SpaceController.class);
+		logger.info("Getting all spaces");
 		return spaceService.getAllSpaces();
 	}
 	

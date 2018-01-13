@@ -6,6 +6,11 @@ import com.exercise.base.Sys;
 import com.exercise.base.Type;
 import com.exercise.item.Item;
 
+/**
+ * 
+ * This is the UserBuilder class that is responsible for building an User instance.
+ *
+ */
 public class UserBuilder implements Builder {
 	
 	private Type type = Type.USER;

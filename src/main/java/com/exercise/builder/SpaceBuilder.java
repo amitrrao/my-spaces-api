@@ -7,6 +7,11 @@ import com.exercise.base.Sys;
 import com.exercise.base.Type;
 import com.exercise.item.Item;
 
+/**
+ * 
+ * This is the SpaceBuilder class that is responsible for building an Space instance.
+ *
+ */
 public class SpaceBuilder implements Builder{
 	private String title;
 	private String description;

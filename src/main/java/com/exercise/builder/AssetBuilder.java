@@ -7,6 +7,11 @@ import com.exercise.base.Sys;
 import com.exercise.base.Type;
 import com.exercise.item.Item;
 
+/**
+ * 
+ * This is the AssetBuilder class that is responsible for building an Asset instance.
+ * 
+ */
 public class AssetBuilder implements Builder {
 
 	private String title;
