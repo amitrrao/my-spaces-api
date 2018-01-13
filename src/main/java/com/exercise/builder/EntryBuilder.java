@@ -1,12 +1,13 @@
-package com.exercise.item;
+package com.exercise.builder;
 
 import java.util.Date;
 
 import com.exercise.base.Field;
 import com.exercise.base.Sys;
 import com.exercise.base.Type;
+import com.exercise.item.Item;
 
-public class EntryBuilder {
+public class EntryBuilder implements Builder {
 
 	private String title;
 	private String summary;
@@ -32,9 +33,10 @@ public class EntryBuilder {
 		this.updatedBy = updatedBy;
 	}
 	
-	public Item createEntryItem() {
+	public Item build() {
 		return new Item(
-				new Field.FieldBuilder(title)
+				new Field.FieldBuilder()
+				.withTitle(title)
 				.withSummary(summary)
 				.withBody(body)
 				.build(),

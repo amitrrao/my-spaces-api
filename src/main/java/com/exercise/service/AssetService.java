@@ -7,7 +7,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.exercise.item.AssetBuilder;
+import com.exercise.builder.AssetBuilder;
 import com.exercise.item.Item;
 
 @Service
@@ -23,7 +23,7 @@ public class AssetService {
 					new Date(), 
 					"4FLrUHftHW3v2BLi9fzfjU", 
 					new Date(), 
-					"4FLrUHftHW3v2BLi9fzfjU").createAssetItem(),
+					"4FLrUHftHW3v2BLi9fzfjU").build(),
 			new AssetBuilder(
 					"Stride Chat", 
 					"image/png",
@@ -33,7 +33,7 @@ public class AssetService {
 					new Date(), 
 					"4FLrUHftHW3v2BLi9fzfjU", 
 					new Date(), 
-					"4FLrUHftHW3v2BLi9fzfjU").createAssetItem(),
+					"4FLrUHftHW3v2BLi9fzfjU").build(),
 			new AssetBuilder(
 					"Get Started", 
 					"image/png",
@@ -43,7 +43,7 @@ public class AssetService {
 					new Date(), 
 					"4FLrUHftHW3v2BLi9fzfjU2", 
 					new Date(), 
-					"4FLrUHftHW3v2BLi9fzfjU2").createAssetItem()
+					"4FLrUHftHW3v2BLi9fzfjU2").build()
 			));
 			
 	

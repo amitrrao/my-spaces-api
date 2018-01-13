@@ -1,12 +1,13 @@
-package com.exercise.item;
+package com.exercise.builder;
 
 import java.util.Date;
 
 import com.exercise.base.Field;
 import com.exercise.base.Sys;
 import com.exercise.base.Type;
+import com.exercise.item.Item;
 
-public class SpaceBuilder {
+public class SpaceBuilder implements Builder{
 	private String title;
 	private String description;
 	
@@ -28,9 +29,10 @@ public class SpaceBuilder {
 		this.updatedBy = updatedBy;
 	}
 	
-	public Item createSpaceItem() {
+	public Item build() {
 		return new Item(
-				new Field.FieldBuilder(title)
+				new Field.FieldBuilder()
+				.withTitle(title)
 				.withDescription(description)
 				.build(), 
 				

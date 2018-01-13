@@ -12,25 +12,11 @@ public class Field {
 	private String contentType;
 	private String fileName;
 	private String upload;
-	
-//	public Field(String title, String description) {
-//		this.title = title;
-//		this.description = description;
-//	}
-//	public Field(String title, String summary, String body) {
-//		this.title = title;
-//		this.summary = summary;
-//		this.body = body;
-//	}
-//	public Field(String title, String contentType, String fileName, String upload) {
-//		this.title = title;
-//		this.contentType = contentType;
-//		this.fileName = fileName;
-//		this.upload = upload;
-//	}
+	private String name;
+	private Role role;
 	
 	public Field(String nestedTitle, String nestedDescription, String nestedSummary, String nestedBody,
-			String nestedContentType, String nestedFileName, String nestedUpload) {
+			String nestedContentType, String nestedFileName, String nestedUpload, String nestedName, Role nestedRole) {
 		this.title = nestedTitle;
 		this.description = nestedDescription;
 		this.summary = nestedSummary;
@@ -38,6 +24,8 @@ public class Field {
 		this.contentType = nestedContentType;
 		this.fileName = nestedFileName;
 		this.upload = nestedUpload;
+		this.setName(nestedName);
+		this.role = nestedRole;
 	}
 	public String getTitle() {
 		return title;
@@ -81,7 +69,19 @@ public class Field {
 	public void setUpload(String upload) {
 		this.upload = upload;
 	}
-	
+	public Role getRole() {
+		return role;
+	}
+	public void setRole(Role role) {
+		this.role = role;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	public static class FieldBuilder {
 		private String nestedTitle;
 		private String nestedDescription;
@@ -90,11 +90,13 @@ public class Field {
 		private String nestedContentType;
 		private String nestedFileName;
 		private String nestedUpload;
+		private String nestedName;
+		private Role nestedRole;
 		
-		public FieldBuilder(String title) {
-			this.nestedTitle= title;
+		public FieldBuilder withTitle(String title) {
+			this.nestedTitle = title;
+			return this;
 		}
-		
 		public FieldBuilder withDescription(String description) {
 			this.nestedDescription = description;
 			return this;
@@ -125,8 +127,18 @@ public class Field {
 			return this;
 		}
 		
+		public FieldBuilder withName(String name) {
+			this.nestedName = name;
+			return this;
+		}
+		
+		public FieldBuilder withRole(Role role) {
+			this.nestedRole = role;
+			return this;
+		}
+		
 		public Field build() {
-			return new Field(this.nestedTitle, this.nestedDescription, this.nestedSummary, this.nestedBody, this.nestedContentType, this.nestedFileName, this.nestedUpload);
+			return new Field(this.nestedTitle, this.nestedDescription, this.nestedSummary, this.nestedBody, this.nestedContentType, this.nestedFileName, this.nestedUpload, this.nestedName, this.nestedRole);
 		}
 	}
 }

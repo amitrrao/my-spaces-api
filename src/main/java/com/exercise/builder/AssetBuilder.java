@@ -1,12 +1,13 @@
-package com.exercise.item;
+package com.exercise.builder;
 
 import java.util.Date;
 
 import com.exercise.base.Field;
 import com.exercise.base.Sys;
 import com.exercise.base.Type;
+import com.exercise.item.Item;
 
-public class AssetBuilder {
+public class AssetBuilder implements Builder {
 
 	private String title;
 	private String contentType;
@@ -33,9 +34,10 @@ public class AssetBuilder {
 		this.updatedBy = updatedBy;
 	}
 	
-	public Item createAssetItem() {
+	public Item build() {
 		return new Item(
-				new Field.FieldBuilder(title)
+				new Field.FieldBuilder()
+				.withTitle(title)
 				.withContentType(contentType)
 				.withFileName(fileName)
 				.withUpload(upload)

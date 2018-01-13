@@ -9,14 +9,14 @@ public enum Type {
 	ASSET("Asset"),
 	USER("User");
 	
-	Type(String name) {
-		this.name = name;
-	}
+	private final String type;
 	
-	private final String name;
+	Type(String type) {
+		this.type = type;
+	}
 	
 	@JsonValue
 	public String getType() {
-		return name;
+		return type;
 	}
 }

@@ -7,8 +7,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.exercise.builder.SpaceBuilder;
 import com.exercise.item.Item;
-import com.exercise.item.SpaceBuilder;
 
 @Service
 public class SpaceService {
@@ -21,7 +21,7 @@ public class SpaceService {
 					new Date(), 
 					"4FLrUHftHW3v2BLi9fzfjU", 
 					new Date(), 
-					"4FLrUHftHW3v2BLi9fzfjU").createSpaceItem(),
+					"4FLrUHftHW3v2BLi9fzfjU").build(),
 			new SpaceBuilder(
 					"My Second Space",
 					"",
@@ -29,7 +29,7 @@ public class SpaceService {
 					new Date(),
 					"4FLrUHftHW3v2BLi9fzfjU",
 					new Date(),
-					"4FLrUHftHW3v2BLi9fzfjU").createSpaceItem(),
+					"4FLrUHftHW3v2BLi9fzfjU").build(),
 			new SpaceBuilder(
 					"My Third Space",
 					"",
@@ -37,7 +37,7 @@ public class SpaceService {
 					new Date(),
 					"4FLrUHftHW3v2BLi9fzfjU",
 					new Date(),
-					"4FLrUHftHW3v2BLi9fzfjU").createSpaceItem()
+					"4FLrUHftHW3v2BLi9fzfjU").build()
 			));
 	
 	public List<Item> getAllSpaces() {

@@ -7,7 +7,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.exercise.item.EntryBuilder;
+import com.exercise.builder.EntryBuilder;
 import com.exercise.item.Item;
 
 @Service
@@ -22,7 +22,7 @@ public class EntryService {
 					new Date(), 
 					"4FLrUHftHW3v2BLi9fzfjU",
 					new Date(), 
-					"4FLrUHftHW3v2BLi9fzfjU").createEntryItem(),
+					"4FLrUHftHW3v2BLi9fzfjU").build(),
 			new EntryBuilder(
 					"Tutorial 1", 
 					"In this tutorial, we will dive deeper into how to leverage the new platform.", 
@@ -31,7 +31,7 @@ public class EntryService {
 					new Date(), 
 					"4FLrUHftHW3v2BLi9fzfjU",
 					new Date(), 
-					"4FLrUHftHW3v2BLi9fzfjU2").createEntryItem(),
+					"4FLrUHftHW3v2BLi9fzfjU2").build(),
 			new EntryBuilder(
 					"Tutorial 2", 
 					"In this tutorial, we will provide an example deployment.", 
@@ -40,7 +40,7 @@ public class EntryService {
 					new Date(), 
 					"4FLrUHftHW3v2BLi9fzfjU",
 					new Date(), 
-					"4FLrUHftHW3v2BLi9fzfjU2").createEntryItem()
+					"4FLrUHftHW3v2BLi9fzfjU2").build()
 			));
 	
 	public List<Item> getAllEntriesBySpace(String spaceId) {
