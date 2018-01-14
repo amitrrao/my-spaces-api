@@ -2,6 +2,9 @@ package com.exercise.builder;
 
 import java.util.Date;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.exercise.base.Field;
 import com.exercise.base.Sys;
 import com.exercise.base.Type;
@@ -13,6 +16,8 @@ import com.exercise.item.Item;
  * 
  */
 public class AssetBuilder implements Builder {
+	
+	private static final Logger logger = LoggerFactory.getLogger(AssetBuilder.class);
 
 	private String title;
 	private String contentType;
@@ -40,6 +45,7 @@ public class AssetBuilder implements Builder {
 	}
 	
 	public Item build() {
+		logger.info("Building a new instance of Asset.");
 		return new Item(
 				new Field.FieldBuilder()
 				.withTitle(title)
