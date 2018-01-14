@@ -3,6 +3,8 @@ package com.exercise.service;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.exercise.base.Type;
@@ -19,6 +21,8 @@ import com.exercise.item.Item;
 @Service
 public class AssetService {
 
+	private static final Logger logger = LoggerFactory.getLogger(AssetService.class);
+	
 	/**
 	 * A method to get all assets for a given spaceId.
 	 * 
@@ -26,6 +30,7 @@ public class AssetService {
 	 * @return a list of all Asset instances.
 	 */
 	public List<Item> getAllAssetsBySpace(String spaceId) {
+		logger.info(String.format("Getting all assets with spaceId: %s.", spaceId));
 		return TestData.ASSETS;
 	}
 
@@ -37,6 +42,9 @@ public class AssetService {
 	 * @return a single Asset instance
 	 */
 	public Item getAssetBySpaceIdAndAssetId(String spaceId, String assetId) throws ItemNotFoundException {
+		
+		logger.info(String.format("Getting asset with spaceId: %s and assetId: %s", spaceId, assetId));
+		
 		try {
 			Item asset = TestData.ASSETS.stream().filter(a -> a.getSys()
 					.getId()

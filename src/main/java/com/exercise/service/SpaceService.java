@@ -3,6 +3,8 @@ package com.exercise.service;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.exercise.base.Type;
@@ -18,6 +20,8 @@ import com.exercise.item.Item;
  */
 @Service
 public class SpaceService {
+	
+	private static final Logger logger = LoggerFactory.getLogger(SpaceService.class);
 
 	/**
 	 * A method to get all spaces in the system
@@ -25,6 +29,7 @@ public class SpaceService {
 	 * @return a list of all Space instances
 	 */
 	public List<Item> getAllSpaces() {
+		logger.info("Getting all spaces:");
 		return TestData.SPACES;
 	}
 
@@ -35,6 +40,9 @@ public class SpaceService {
 	 * @return a single Space instance
 	 */
 	public Item getSpace(String spaceId) throws ItemNotFoundException {
+		
+		logger.info(String.format("Getting space with id: %s", spaceId));
+		
 		try {
 			Item space = TestData.SPACES.stream().filter(s -> s.getSys()
 					.getId()

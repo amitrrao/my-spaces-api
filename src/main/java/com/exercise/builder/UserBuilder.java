@@ -1,5 +1,8 @@
 package com.exercise.builder;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.exercise.base.Field;
 import com.exercise.base.Role;
 import com.exercise.base.Sys;
@@ -13,6 +16,8 @@ import com.exercise.item.Item;
  */
 public class UserBuilder implements Builder {
 	
+	private static final Logger logger = LoggerFactory.getLogger(UserBuilder.class);
+	
 	private Type type = Type.USER;
 	private String name;
 	private Role role;
@@ -25,6 +30,7 @@ public class UserBuilder implements Builder {
 	}
 	
 	public Item build() {
+		logger.info("Building a new instance of User.");
 		return new Item(
 				new Field.FieldBuilder()
 				.withName(name)

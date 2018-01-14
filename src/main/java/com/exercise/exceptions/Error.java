@@ -2,6 +2,11 @@ package com.exercise.exceptions;
 
 import org.springframework.http.HttpStatus;
 
+/**
+ * 
+ * Error is a generic class that is created to handle invalid requests.
+ *
+ */
 public class Error {
 
 	private HttpStatus status;

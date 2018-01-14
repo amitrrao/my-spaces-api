@@ -2,6 +2,9 @@ package com.exercise.builder;
 
 import java.util.Date;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.exercise.base.Field;
 import com.exercise.base.Sys;
 import com.exercise.base.Type;
@@ -13,6 +16,8 @@ import com.exercise.item.Item;
  *
  */
 public class EntryBuilder implements Builder {
+	
+	private static final Logger logger = LoggerFactory.getLogger(EntryBuilder.class);
 
 	private String title;
 	private String summary;
@@ -39,6 +44,7 @@ public class EntryBuilder implements Builder {
 	}
 	
 	public Item build() {
+		logger.info("Building a new instance of Entry.");
 		return new Item(
 				new Field.FieldBuilder()
 				.withTitle(title)

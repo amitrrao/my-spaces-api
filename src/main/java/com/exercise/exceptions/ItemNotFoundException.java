@@ -1,6 +1,11 @@
 package com.exercise.exceptions;
 
 @SuppressWarnings("serial")
+/**
+ * 
+ * ItemNotFoundException is a specific instance of an exception that gets created when a requested item is not found in the system.
+ *
+ */
 public class ItemNotFoundException extends Exception {
 	
 	private String message;
