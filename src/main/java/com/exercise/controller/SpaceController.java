@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.exercise.exceptions.ItemNotFoundException;
 import com.exercise.item.Item;
 import com.exercise.service.AssetService;
 import com.exercise.service.EntryService;
@@ -42,7 +43,7 @@ public class SpaceController { //implements ErrorController {
 	}
 	
 	@RequestMapping("/spaces/{spaceId}")
-	public Item getSpace(@PathVariable(required = true) String spaceId) {
+	public Item getSpace(@PathVariable(required = true) String spaceId) throws ItemNotFoundException {
 		return spaceService.getSpace(spaceId);
 	}
 	
@@ -52,7 +53,7 @@ public class SpaceController { //implements ErrorController {
 	}
 	
 	@RequestMapping("/spaces/{spaceId}/entries/{entryId}")
-	public Item getEntryBySpaceIdAndEntryId(@PathVariable(required = true) String spaceId, @PathVariable(required = true) String entryId) {
+	public Item getEntryBySpaceIdAndEntryId(@PathVariable(required = true) String spaceId, @PathVariable(required = true) String entryId) throws ItemNotFoundException {
 		return entryService.getEntryBySpaceIdAndEntryId(spaceId, entryId);
 	}
 	
@@ -62,7 +63,7 @@ public class SpaceController { //implements ErrorController {
 	}
 	
 	@RequestMapping("/spaces/{spaceId}/assets/{assetId}")
-	public Item getAssetBySpaceIdAndAssetId(@PathVariable(required = true) String spaceId, @PathVariable(required = true) String assetId) {
+	public Item getAssetBySpaceIdAndAssetId(@PathVariable(required = true) String spaceId, @PathVariable(required = true) String assetId) throws ItemNotFoundException {
 		return assetService.getAssetBySpaceIdAndAssetId(spaceId, assetId);
 	}
 	
@@ -72,7 +73,7 @@ public class SpaceController { //implements ErrorController {
 	}
 	
 	@RequestMapping("/users/{userId}")
-	public Item getUser(@PathVariable(required = true) String userId) {
+	public Item getUser(@PathVariable(required = true) String userId) throws ItemNotFoundException {
 		return userService.getUser(userId);
 	}
 

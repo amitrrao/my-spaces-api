@@ -1,10 +1,13 @@
 package com.exercise.service;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.springframework.stereotype.Service;
 
+import com.exercise.base.Type;
 import com.exercise.data.TestData;
+import com.exercise.exceptions.ItemNotFoundException;
 import com.exercise.item.Item;
 
 /**
@@ -25,7 +28,7 @@ public class AssetService {
 	public List<Item> getAllAssetsBySpace(String spaceId) {
 		return TestData.ASSETS;
 	}
-	
+
 	/**
 	 * A method to get an asset given a spaceId and an assetId.
 	 * 
@@ -33,11 +36,16 @@ public class AssetService {
 	 * @param assetId
 	 * @return a single Asset instance
 	 */
-	public Item getAssetBySpaceIdAndAssetId(String spaceId, String assetId) {
-		return TestData.ASSETS.stream().filter(a -> a.getSys()
-				.getId()
-				.equals(assetId))
-				.findFirst()
-				.get();
+	public Item getAssetBySpaceIdAndAssetId(String spaceId, String assetId) throws ItemNotFoundException {
+		try {
+			Item asset = TestData.ASSETS.stream().filter(a -> a.getSys()
+					.getId()
+					.equals(assetId))
+					.findFirst()
+					.get();
+			return asset;
+		} catch(NoSuchElementException nsee) {
+			throw new ItemNotFoundException(Type.ASSET.getType() + " not found.");
+		}
 	}
 }
