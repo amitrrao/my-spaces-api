@@ -563,3 +563,957 @@ java.lang.NoSuchMethodError: org.mockito.internal.util.MockUtil.getMockSettings(
 2018-01-14 23:17:31.902  INFO 11589 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2018-01-14 23:17:31.903  INFO 11589 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
 2018-01-14 23:17:31.903  INFO 11589 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-01-14 23:18:21.642  INFO 11630 --- [main] com.exercise.SpaceControllerTest         : Starting SpaceControllerTest on Arunimas-MBP with PID 11630 (started by agoel in /Users/agoel/Documents/projects/workspace/my-spaces-api)
+2018-01-14 23:18:21.643  INFO 11630 --- [main] com.exercise.SpaceControllerTest         : No active profile set, falling back to default profiles: default
+2018-01-14 23:18:21.671  INFO 11630 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1ed6388a: startup date [Sun Jan 14 23:18:21 CST 2018]; root of context hierarchy
+2018-01-14 23:18:23.397  INFO 11630 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:18:23.412  INFO 11630 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-01-14 23:18:23.470  INFO 11630 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-01-14 23:18:23.471  INFO 11630 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-01-14 23:18:23.473  INFO 11630 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-01-14 23:18:23.504  INFO 11630 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-01-14 23:18:23.645  INFO 11630 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.DerbyDialect
+2018-01-14 23:18:23.650  WARN 11630 --- [main] org.hibernate.dialect.DerbyDialect       : HHH000430: The DerbyDialect dialect has been deprecated; use one of the version-specific dialects instead
+2018-01-14 23:18:24.055  INFO 11630 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-01-14 23:18:24.056  WARN 11630 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 10000, SQLState: 01J01
+2018-01-14 23:18:24.056  WARN 11630 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database 'memory:testdb' not created, connection made to existing database instead.
+2018-01-14 23:18:24.057  INFO 11630 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-01-14 23:18:24.079  INFO 11630 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:18:24.520  INFO 11630 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@1ed6388a: startup date [Sun Jan 14 23:18:21 CST 2018]; root of context hierarchy
+2018-01-14 23:18:24.600  INFO 11630 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getSpace(java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:18:24.602  INFO 11630 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public java.lang.String com.exercise.controller.SpaceController.error()
+2018-01-14 23:18:24.602  INFO 11630 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllSpaces()
+2018-01-14 23:18:24.602  INFO 11630 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/entries]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllEntriesBySpace(java.lang.String)
+2018-01-14 23:18:24.602  INFO 11630 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/entries/{entryId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getEntryBySpaceIdAndEntryId(java.lang.String,java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:18:24.603  INFO 11630 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/assets]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllAssetsBySpace(java.lang.String)
+2018-01-14 23:18:24.603  INFO 11630 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/assets/{assetId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getAssetBySpaceIdAndAssetId(java.lang.String,java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:18:24.604  INFO 11630 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{userId}]}" onto public com.exercise.item.Item com.exercise.controller.UserController.getUser(java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:18:24.604  INFO 11630 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.UserController.getAllUsers()
+2018-01-14 23:18:24.631  INFO 11630 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:18:24.631  INFO 11630 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:18:24.648  INFO 11630 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in apiExceptionHandler
+2018-01-14 23:18:24.671  INFO 11630 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:18:24.870  INFO 11630 --- [main] com.exercise.SpaceControllerTest         : Started SpaceControllerTest in 3.494 seconds (JVM running for 4.101)
+2018-01-14 23:18:24.887  WARN 11630 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@124c278f] to process 'before' execution of test method [public void com.exercise.SpaceControllerTest.test()] for test instance [com.exercise.SpaceControllerTest@1cde374]
+
+java.lang.NoSuchMethodError: org.mockito.internal.util.MockUtil.getMockSettings(Ljava/lang/Object;)Lorg/mockito/mock/MockCreationSettings;
+	at org.springframework.boot.test.mock.mockito.MockitoApi$Mockito1Api.getMockSettings(MockitoApi.java:119) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.MockReset.get(MockReset.java:108) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:69) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:55) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.beforeTestMethod(ResetMocksTestExecutionListener.java:45) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:269) ~[spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103) [surefire-booter-2.18.1.jar:2.18.1]
+
+2018-01-14 23:18:24.891  WARN 11630 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@124c278f] to process 'after' execution for test: method [public void com.exercise.SpaceControllerTest.test()], instance [com.exercise.SpaceControllerTest@1cde374], exception [java.lang.NoSuchMethodError: org.mockito.internal.util.MockUtil.getMockSettings(Ljava/lang/Object;)Lorg/mockito/mock/MockCreationSettings;]
+
+java.lang.NoSuchMethodError: org.mockito.internal.util.MockUtil.getMockSettings(Ljava/lang/Object;)Lorg/mockito/mock/MockCreationSettings;
+	at org.springframework.boot.test.mock.mockito.MockitoApi$Mockito1Api.getMockSettings(MockitoApi.java:119) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.MockReset.get(MockReset.java:108) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:69) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:55) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.afterTestMethod(ResetMocksTestExecutionListener.java:50) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.test.context.TestContextManager.afterTestMethod(TestContextManager.java:319) ~[spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:94) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103) [surefire-booter-2.18.1.jar:2.18.1]
+
+2018-01-14 23:18:24.899  INFO 11630 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.exercise.MySpacesApiApplicationTests], using SpringBootContextLoader
+2018-01-14 23:18:24.899  INFO 11630 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.exercise.MySpacesApiApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-01-14 23:18:24.899  INFO 11630 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.exercise.MySpacesApiApplicationTests]: MySpacesApiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-01-14 23:18:24.902  INFO 11630 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.exercise.MySpacesApiApplication for test class com.exercise.MySpacesApiApplicationTests
+2018-01-14 23:18:24.904  INFO 11630 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-01-14 23:18:24.907  INFO 11630 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@8eb6f9a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@29170a47, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2a8f8555, org.springframework.test.context.support.DirtiesContextTestExecutionListener@402b4f81, org.springframework.test.context.transaction.TransactionalTestExecutionListener@13ef7fa1, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@23b1aa9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@54489296, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4e8598d9, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@267ff4df, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7c4b5ceb, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6c07add6, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@e26a3df]
+2018-01-14 23:18:24.942  INFO 11630 --- [main] c.exercise.MySpacesApiApplicationTests   : Starting MySpacesApiApplicationTests on Arunimas-MBP with PID 11630 (started by agoel in /Users/agoel/Documents/projects/workspace/my-spaces-api)
+2018-01-14 23:18:24.942  INFO 11630 --- [main] c.exercise.MySpacesApiApplicationTests   : No active profile set, falling back to default profiles: default
+2018-01-14 23:18:24.945  INFO 11630 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@25533bba: startup date [Sun Jan 14 23:18:24 CST 2018]; root of context hierarchy
+2018-01-14 23:18:25.329  INFO 11630 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:18:25.330  INFO 11630 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-01-14 23:18:25.332  INFO 11630 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.DerbyDialect
+2018-01-14 23:18:25.333  WARN 11630 --- [main] org.hibernate.dialect.DerbyDialect       : HHH000430: The DerbyDialect dialect has been deprecated; use one of the version-specific dialects instead
+2018-01-14 23:18:25.341  INFO 11630 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-01-14 23:18:25.342  WARN 11630 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 10000, SQLState: 01J01
+2018-01-14 23:18:25.342  WARN 11630 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database 'memory:testdb' not created, connection made to existing database instead.
+2018-01-14 23:18:25.342  INFO 11630 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-01-14 23:18:25.343  WARN 11630 --- [main] o.h.j.i.EntityManagerFactoryRegistry     : HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+2018-01-14 23:18:25.343  INFO 11630 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:18:25.527  INFO 11630 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@25533bba: startup date [Sun Jan 14 23:18:24 CST 2018]; root of context hierarchy
+2018-01-14 23:18:25.542  INFO 11630 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getSpace(java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:18:25.543  INFO 11630 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public java.lang.String com.exercise.controller.SpaceController.error()
+2018-01-14 23:18:25.543  INFO 11630 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllSpaces()
+2018-01-14 23:18:25.543  INFO 11630 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/entries]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllEntriesBySpace(java.lang.String)
+2018-01-14 23:18:25.543  INFO 11630 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/entries/{entryId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getEntryBySpaceIdAndEntryId(java.lang.String,java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:18:25.543  INFO 11630 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/assets]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllAssetsBySpace(java.lang.String)
+2018-01-14 23:18:25.544  INFO 11630 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/assets/{assetId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getAssetBySpaceIdAndAssetId(java.lang.String,java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:18:25.544  INFO 11630 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{userId}]}" onto public com.exercise.item.Item com.exercise.controller.UserController.getUser(java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:18:25.544  INFO 11630 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.UserController.getAllUsers()
+2018-01-14 23:18:25.565  INFO 11630 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:18:25.566  INFO 11630 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:18:25.575  INFO 11630 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in apiExceptionHandler
+2018-01-14 23:18:25.593  INFO 11630 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:18:25.746  INFO 11630 --- [main] c.exercise.MySpacesApiApplicationTests   : Started MySpacesApiApplicationTests in 0.832 seconds (JVM running for 4.977)
+2018-01-14 23:18:25.755  INFO 11630 --- [Thread-6] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@25533bba: startup date [Sun Jan 14 23:18:24 CST 2018]; root of context hierarchy
+2018-01-14 23:18:25.755  INFO 11630 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@1ed6388a: startup date [Sun Jan 14 23:18:21 CST 2018]; root of context hierarchy
+2018-01-14 23:18:25.758  INFO 11630 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:18:25.759  INFO 11630 --- [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:18:25.759  INFO 11630 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-01-14 23:18:25.759  INFO 11630 --- [Thread-6] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-01-14 23:18:25.760  INFO 11630 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-01-14 23:18:25.760  INFO 11630 --- [Thread-6] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-01-14 23:20:38.113  INFO 11666 --- [main] com.exercise.SpaceControllerTest         : Starting SpaceControllerTest on Arunimas-MBP with PID 11666 (started by agoel in /Users/agoel/Documents/projects/workspace/my-spaces-api)
+2018-01-14 23:20:38.115  INFO 11666 --- [main] com.exercise.SpaceControllerTest         : No active profile set, falling back to default profiles: default
+2018-01-14 23:20:38.143  INFO 11666 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1ed6388a: startup date [Sun Jan 14 23:20:38 CST 2018]; root of context hierarchy
+2018-01-14 23:20:39.848  INFO 11666 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:20:39.864  INFO 11666 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-01-14 23:20:39.920  INFO 11666 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-01-14 23:20:39.921  INFO 11666 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-01-14 23:20:39.923  INFO 11666 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-01-14 23:20:39.954  INFO 11666 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-01-14 23:20:40.098  INFO 11666 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.DerbyDialect
+2018-01-14 23:20:40.103  WARN 11666 --- [main] org.hibernate.dialect.DerbyDialect       : HHH000430: The DerbyDialect dialect has been deprecated; use one of the version-specific dialects instead
+2018-01-14 23:20:40.494  INFO 11666 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-01-14 23:20:40.498  WARN 11666 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 10000, SQLState: 01J01
+2018-01-14 23:20:40.498  WARN 11666 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database 'memory:testdb' not created, connection made to existing database instead.
+2018-01-14 23:20:40.498  INFO 11666 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-01-14 23:20:40.521  INFO 11666 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:20:40.961  INFO 11666 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@1ed6388a: startup date [Sun Jan 14 23:20:38 CST 2018]; root of context hierarchy
+2018-01-14 23:20:41.045  INFO 11666 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getSpace(java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:20:41.046  INFO 11666 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public java.lang.String com.exercise.controller.SpaceController.error()
+2018-01-14 23:20:41.047  INFO 11666 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllSpaces()
+2018-01-14 23:20:41.047  INFO 11666 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/entries]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllEntriesBySpace(java.lang.String)
+2018-01-14 23:20:41.048  INFO 11666 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/entries/{entryId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getEntryBySpaceIdAndEntryId(java.lang.String,java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:20:41.048  INFO 11666 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/assets]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllAssetsBySpace(java.lang.String)
+2018-01-14 23:20:41.048  INFO 11666 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/assets/{assetId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getAssetBySpaceIdAndAssetId(java.lang.String,java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:20:41.049  INFO 11666 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{userId}]}" onto public com.exercise.item.Item com.exercise.controller.UserController.getUser(java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:20:41.049  INFO 11666 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.UserController.getAllUsers()
+2018-01-14 23:20:41.077  INFO 11666 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:20:41.078  INFO 11666 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:20:41.098  INFO 11666 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in apiExceptionHandler
+2018-01-14 23:20:41.121  INFO 11666 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:20:41.333  INFO 11666 --- [main] com.exercise.SpaceControllerTest         : Started SpaceControllerTest in 3.491 seconds (JVM running for 4.122)
+2018-01-14 23:20:41.354  WARN 11666 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@124c278f] to process 'before' execution of test method [public void com.exercise.SpaceControllerTest.test()] for test instance [com.exercise.SpaceControllerTest@48cdb156]
+
+java.lang.NoSuchMethodError: org.mockito.internal.util.MockUtil.getMockSettings(Ljava/lang/Object;)Lorg/mockito/mock/MockCreationSettings;
+	at org.springframework.boot.test.mock.mockito.MockitoApi$Mockito1Api.getMockSettings(MockitoApi.java:119) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.MockReset.get(MockReset.java:108) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:69) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:55) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.beforeTestMethod(ResetMocksTestExecutionListener.java:45) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:269) ~[spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103) [surefire-booter-2.18.1.jar:2.18.1]
+
+2018-01-14 23:20:41.358  WARN 11666 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@124c278f] to process 'after' execution for test: method [public void com.exercise.SpaceControllerTest.test()], instance [com.exercise.SpaceControllerTest@48cdb156], exception [java.lang.NoSuchMethodError: org.mockito.internal.util.MockUtil.getMockSettings(Ljava/lang/Object;)Lorg/mockito/mock/MockCreationSettings;]
+
+java.lang.NoSuchMethodError: org.mockito.internal.util.MockUtil.getMockSettings(Ljava/lang/Object;)Lorg/mockito/mock/MockCreationSettings;
+	at org.springframework.boot.test.mock.mockito.MockitoApi$Mockito1Api.getMockSettings(MockitoApi.java:119) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.MockReset.get(MockReset.java:108) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:69) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:55) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.afterTestMethod(ResetMocksTestExecutionListener.java:50) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.test.context.TestContextManager.afterTestMethod(TestContextManager.java:319) ~[spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:94) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103) [surefire-booter-2.18.1.jar:2.18.1]
+
+2018-01-14 23:20:41.367  INFO 11666 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.exercise.MySpacesApiApplicationTests], using SpringBootContextLoader
+2018-01-14 23:20:41.367  INFO 11666 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.exercise.MySpacesApiApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-01-14 23:20:41.367  INFO 11666 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.exercise.MySpacesApiApplicationTests]: MySpacesApiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-01-14 23:20:41.371  INFO 11666 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.exercise.MySpacesApiApplication for test class com.exercise.MySpacesApiApplicationTests
+2018-01-14 23:20:41.373  INFO 11666 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-01-14 23:20:41.375  INFO 11666 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3af236d0, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@23564dd2, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@54895681, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2dd0a0d0, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6bf570c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1796b2d4, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@935d3f9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@214b342f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5db0003d, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7f12094d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@589fb74d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@200d1a3d]
+2018-01-14 23:20:41.417  INFO 11666 --- [main] c.exercise.MySpacesApiApplicationTests   : Starting MySpacesApiApplicationTests on Arunimas-MBP with PID 11666 (started by agoel in /Users/agoel/Documents/projects/workspace/my-spaces-api)
+2018-01-14 23:20:41.417  INFO 11666 --- [main] c.exercise.MySpacesApiApplicationTests   : No active profile set, falling back to default profiles: default
+2018-01-14 23:20:41.420  INFO 11666 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@25567581: startup date [Sun Jan 14 23:20:41 CST 2018]; root of context hierarchy
+2018-01-14 23:20:41.816  INFO 11666 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:20:41.816  INFO 11666 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-01-14 23:20:41.820  INFO 11666 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.DerbyDialect
+2018-01-14 23:20:41.820  WARN 11666 --- [main] org.hibernate.dialect.DerbyDialect       : HHH000430: The DerbyDialect dialect has been deprecated; use one of the version-specific dialects instead
+2018-01-14 23:20:41.832  INFO 11666 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-01-14 23:20:41.832  WARN 11666 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 10000, SQLState: 01J01
+2018-01-14 23:20:41.833  WARN 11666 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database 'memory:testdb' not created, connection made to existing database instead.
+2018-01-14 23:20:41.833  INFO 11666 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-01-14 23:20:41.833  WARN 11666 --- [main] o.h.j.i.EntityManagerFactoryRegistry     : HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+2018-01-14 23:20:41.833  INFO 11666 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:20:42.040  INFO 11666 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@25567581: startup date [Sun Jan 14 23:20:41 CST 2018]; root of context hierarchy
+2018-01-14 23:20:42.057  INFO 11666 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getSpace(java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:20:42.057  INFO 11666 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public java.lang.String com.exercise.controller.SpaceController.error()
+2018-01-14 23:20:42.057  INFO 11666 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllSpaces()
+2018-01-14 23:20:42.057  INFO 11666 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/entries]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllEntriesBySpace(java.lang.String)
+2018-01-14 23:20:42.058  INFO 11666 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/entries/{entryId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getEntryBySpaceIdAndEntryId(java.lang.String,java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:20:42.058  INFO 11666 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/assets]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllAssetsBySpace(java.lang.String)
+2018-01-14 23:20:42.058  INFO 11666 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/assets/{assetId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getAssetBySpaceIdAndAssetId(java.lang.String,java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:20:42.059  INFO 11666 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{userId}]}" onto public com.exercise.item.Item com.exercise.controller.UserController.getUser(java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:20:42.059  INFO 11666 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.UserController.getAllUsers()
+2018-01-14 23:20:42.078  INFO 11666 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:20:42.079  INFO 11666 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:20:42.088  INFO 11666 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in apiExceptionHandler
+2018-01-14 23:20:42.101  INFO 11666 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:20:42.239  INFO 11666 --- [main] c.exercise.MySpacesApiApplicationTests   : Started MySpacesApiApplicationTests in 0.857 seconds (JVM running for 5.028)
+2018-01-14 23:20:42.246  INFO 11666 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@1ed6388a: startup date [Sun Jan 14 23:20:38 CST 2018]; root of context hierarchy
+2018-01-14 23:20:42.246  INFO 11666 --- [Thread-6] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@25567581: startup date [Sun Jan 14 23:20:41 CST 2018]; root of context hierarchy
+2018-01-14 23:20:42.249  INFO 11666 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:20:42.249  INFO 11666 --- [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:20:42.250  INFO 11666 --- [Thread-6] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-01-14 23:20:42.250  INFO 11666 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-01-14 23:20:42.250  INFO 11666 --- [Thread-6] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-01-14 23:20:42.250  INFO 11666 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-01-14 23:21:15.337  INFO 11698 --- [main] c.exercise.MySpacesApiApplicationTests   : Starting MySpacesApiApplicationTests on Arunimas-MBP with PID 11698 (started by agoel in /Users/agoel/Documents/projects/workspace/my-spaces-api)
+2018-01-14 23:21:15.338  INFO 11698 --- [main] c.exercise.MySpacesApiApplicationTests   : No active profile set, falling back to default profiles: default
+2018-01-14 23:21:15.367  INFO 11698 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5403f35f: startup date [Sun Jan 14 23:21:15 CST 2018]; root of context hierarchy
+2018-01-14 23:21:17.049  INFO 11698 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:21:17.065  INFO 11698 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-01-14 23:21:17.123  INFO 11698 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-01-14 23:21:17.124  INFO 11698 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-01-14 23:21:17.125  INFO 11698 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-01-14 23:21:17.157  INFO 11698 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-01-14 23:21:17.247  INFO 11698 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.DerbyDialect
+2018-01-14 23:21:17.252  WARN 11698 --- [main] org.hibernate.dialect.DerbyDialect       : HHH000430: The DerbyDialect dialect has been deprecated; use one of the version-specific dialects instead
+2018-01-14 23:21:17.711  INFO 11698 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-01-14 23:21:17.712  WARN 11698 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 10000, SQLState: 01J01
+2018-01-14 23:21:17.712  WARN 11698 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database 'memory:testdb' not created, connection made to existing database instead.
+2018-01-14 23:21:17.713  INFO 11698 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-01-14 23:21:17.735  INFO 11698 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:21:18.226  INFO 11698 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@5403f35f: startup date [Sun Jan 14 23:21:15 CST 2018]; root of context hierarchy
+2018-01-14 23:21:18.306  INFO 11698 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getSpace(java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:21:18.308  INFO 11698 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public java.lang.String com.exercise.controller.SpaceController.error()
+2018-01-14 23:21:18.308  INFO 11698 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllSpaces()
+2018-01-14 23:21:18.308  INFO 11698 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/entries]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllEntriesBySpace(java.lang.String)
+2018-01-14 23:21:18.309  INFO 11698 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/entries/{entryId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getEntryBySpaceIdAndEntryId(java.lang.String,java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:21:18.309  INFO 11698 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/assets]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllAssetsBySpace(java.lang.String)
+2018-01-14 23:21:18.309  INFO 11698 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/assets/{assetId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getAssetBySpaceIdAndAssetId(java.lang.String,java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:21:18.310  INFO 11698 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{userId}]}" onto public com.exercise.item.Item com.exercise.controller.UserController.getUser(java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:21:18.311  INFO 11698 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.UserController.getAllUsers()
+2018-01-14 23:21:18.349  INFO 11698 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:21:18.349  INFO 11698 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:21:18.365  INFO 11698 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in apiExceptionHandler
+2018-01-14 23:21:18.386  INFO 11698 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:21:18.603  INFO 11698 --- [main] c.exercise.MySpacesApiApplicationTests   : Started MySpacesApiApplicationTests in 3.489 seconds (JVM running for 4.095)
+2018-01-14 23:21:18.672  INFO 11698 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@5403f35f: startup date [Sun Jan 14 23:21:15 CST 2018]; root of context hierarchy
+2018-01-14 23:21:18.675  INFO 11698 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:21:18.675  INFO 11698 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-01-14 23:21:18.676  INFO 11698 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-01-14 23:21:40.940  INFO 11731 --- [main] com.exercise.SpaceControllerTest         : Starting SpaceControllerTest on Arunimas-MBP with PID 11731 (started by agoel in /Users/agoel/Documents/projects/workspace/my-spaces-api)
+2018-01-14 23:21:40.941  INFO 11731 --- [main] com.exercise.SpaceControllerTest         : No active profile set, falling back to default profiles: default
+2018-01-14 23:21:40.968  INFO 11731 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1ed6388a: startup date [Sun Jan 14 23:21:40 CST 2018]; root of context hierarchy
+2018-01-14 23:21:42.918  INFO 11731 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:21:42.935  INFO 11731 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-01-14 23:21:42.997  INFO 11731 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-01-14 23:21:42.998  INFO 11731 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-01-14 23:21:42.999  INFO 11731 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-01-14 23:21:43.031  INFO 11731 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-01-14 23:21:43.178  INFO 11731 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.DerbyDialect
+2018-01-14 23:21:43.184  WARN 11731 --- [main] org.hibernate.dialect.DerbyDialect       : HHH000430: The DerbyDialect dialect has been deprecated; use one of the version-specific dialects instead
+2018-01-14 23:21:43.624  INFO 11731 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-01-14 23:21:43.626  WARN 11731 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 10000, SQLState: 01J01
+2018-01-14 23:21:43.626  WARN 11731 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database 'memory:testdb' not created, connection made to existing database instead.
+2018-01-14 23:21:43.626  INFO 11731 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-01-14 23:21:43.650  INFO 11731 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:21:44.097  INFO 11731 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@1ed6388a: startup date [Sun Jan 14 23:21:40 CST 2018]; root of context hierarchy
+2018-01-14 23:21:44.198  INFO 11731 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getSpace(java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:21:44.200  INFO 11731 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public java.lang.String com.exercise.controller.SpaceController.error()
+2018-01-14 23:21:44.201  INFO 11731 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/entries]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllEntriesBySpace(java.lang.String)
+2018-01-14 23:21:44.201  INFO 11731 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/entries/{entryId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getEntryBySpaceIdAndEntryId(java.lang.String,java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:21:44.201  INFO 11731 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/assets]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllAssetsBySpace(java.lang.String)
+2018-01-14 23:21:44.202  INFO 11731 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/assets/{assetId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getAssetBySpaceIdAndAssetId(java.lang.String,java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:21:44.202  INFO 11731 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllSpaces()
+2018-01-14 23:21:44.202  INFO 11731 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{userId}]}" onto public com.exercise.item.Item com.exercise.controller.UserController.getUser(java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:21:44.203  INFO 11731 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.UserController.getAllUsers()
+2018-01-14 23:21:44.228  INFO 11731 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:21:44.228  INFO 11731 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:21:44.244  INFO 11731 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in apiExceptionHandler
+2018-01-14 23:21:44.267  INFO 11731 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:21:44.474  INFO 11731 --- [main] com.exercise.SpaceControllerTest         : Started SpaceControllerTest in 3.805 seconds (JVM running for 4.454)
+2018-01-14 23:21:44.492  WARN 11731 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@124c278f] to process 'before' execution of test method [public void com.exercise.SpaceControllerTest.test()] for test instance [com.exercise.SpaceControllerTest@2b441e56]
+
+java.lang.NoSuchMethodError: org.mockito.internal.util.MockUtil.getMockSettings(Ljava/lang/Object;)Lorg/mockito/mock/MockCreationSettings;
+	at org.springframework.boot.test.mock.mockito.MockitoApi$Mockito1Api.getMockSettings(MockitoApi.java:119) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.MockReset.get(MockReset.java:108) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:69) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:55) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.beforeTestMethod(ResetMocksTestExecutionListener.java:45) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:269) ~[spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103) [surefire-booter-2.18.1.jar:2.18.1]
+
+2018-01-14 23:21:44.496  WARN 11731 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@124c278f] to process 'after' execution for test: method [public void com.exercise.SpaceControllerTest.test()], instance [com.exercise.SpaceControllerTest@2b441e56], exception [java.lang.NoSuchMethodError: org.mockito.internal.util.MockUtil.getMockSettings(Ljava/lang/Object;)Lorg/mockito/mock/MockCreationSettings;]
+
+java.lang.NoSuchMethodError: org.mockito.internal.util.MockUtil.getMockSettings(Ljava/lang/Object;)Lorg/mockito/mock/MockCreationSettings;
+	at org.springframework.boot.test.mock.mockito.MockitoApi$Mockito1Api.getMockSettings(MockitoApi.java:119) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.MockReset.get(MockReset.java:108) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:69) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:55) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.afterTestMethod(ResetMocksTestExecutionListener.java:50) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.test.context.TestContextManager.afterTestMethod(TestContextManager.java:319) ~[spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:94) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103) [surefire-booter-2.18.1.jar:2.18.1]
+
+2018-01-14 23:21:44.504  INFO 11731 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.exercise.MySpacesApiApplicationTests], using SpringBootContextLoader
+2018-01-14 23:21:44.504  INFO 11731 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.exercise.MySpacesApiApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-01-14 23:21:44.504  INFO 11731 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.exercise.MySpacesApiApplicationTests]: MySpacesApiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-01-14 23:21:44.506  INFO 11731 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.exercise.MySpacesApiApplication for test class com.exercise.MySpacesApiApplicationTests
+2018-01-14 23:21:44.508  INFO 11731 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-01-14 23:21:44.511  INFO 11731 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1796b2d4, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@935d3f9, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@214b342f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5db0003d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7f12094d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@589fb74d, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@200d1a3d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7de147e9, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@12567179, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@37d699a1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7f42b194, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@8eb6f9a]
+2018-01-14 23:21:44.550  INFO 11731 --- [main] c.exercise.MySpacesApiApplicationTests   : Starting MySpacesApiApplicationTests on Arunimas-MBP with PID 11731 (started by agoel in /Users/agoel/Documents/projects/workspace/my-spaces-api)
+2018-01-14 23:21:44.550  INFO 11731 --- [main] c.exercise.MySpacesApiApplicationTests   : No active profile set, falling back to default profiles: default
+2018-01-14 23:21:44.552  INFO 11731 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3dc39459: startup date [Sun Jan 14 23:21:44 CST 2018]; root of context hierarchy
+2018-01-14 23:21:44.924  INFO 11731 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:21:44.924  INFO 11731 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-01-14 23:21:44.929  INFO 11731 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.DerbyDialect
+2018-01-14 23:21:44.930  WARN 11731 --- [main] org.hibernate.dialect.DerbyDialect       : HHH000430: The DerbyDialect dialect has been deprecated; use one of the version-specific dialects instead
+2018-01-14 23:21:44.941  INFO 11731 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-01-14 23:21:44.942  WARN 11731 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 10000, SQLState: 01J01
+2018-01-14 23:21:44.942  WARN 11731 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database 'memory:testdb' not created, connection made to existing database instead.
+2018-01-14 23:21:44.942  INFO 11731 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-01-14 23:21:44.942  WARN 11731 --- [main] o.h.j.i.EntityManagerFactoryRegistry     : HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+2018-01-14 23:21:44.943  INFO 11731 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:21:45.118  INFO 11731 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@3dc39459: startup date [Sun Jan 14 23:21:44 CST 2018]; root of context hierarchy
+2018-01-14 23:21:45.137  INFO 11731 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getSpace(java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:21:45.138  INFO 11731 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public java.lang.String com.exercise.controller.SpaceController.error()
+2018-01-14 23:21:45.138  INFO 11731 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/entries]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllEntriesBySpace(java.lang.String)
+2018-01-14 23:21:45.139  INFO 11731 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/entries/{entryId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getEntryBySpaceIdAndEntryId(java.lang.String,java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:21:45.139  INFO 11731 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/assets]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllAssetsBySpace(java.lang.String)
+2018-01-14 23:21:45.139  INFO 11731 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/assets/{assetId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getAssetBySpaceIdAndAssetId(java.lang.String,java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:21:45.139  INFO 11731 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllSpaces()
+2018-01-14 23:21:45.140  INFO 11731 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{userId}]}" onto public com.exercise.item.Item com.exercise.controller.UserController.getUser(java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:21:45.140  INFO 11731 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.UserController.getAllUsers()
+2018-01-14 23:21:45.161  INFO 11731 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:21:45.166  INFO 11731 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:21:45.174  INFO 11731 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in apiExceptionHandler
+2018-01-14 23:21:45.187  INFO 11731 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:21:45.344  INFO 11731 --- [main] c.exercise.MySpacesApiApplicationTests   : Started MySpacesApiApplicationTests in 0.827 seconds (JVM running for 5.323)
+2018-01-14 23:21:45.351  INFO 11731 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@1ed6388a: startup date [Sun Jan 14 23:21:40 CST 2018]; root of context hierarchy
+2018-01-14 23:21:45.351  INFO 11731 --- [Thread-6] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@3dc39459: startup date [Sun Jan 14 23:21:44 CST 2018]; root of context hierarchy
+2018-01-14 23:21:45.354  INFO 11731 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:21:45.354  INFO 11731 --- [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:21:45.355  INFO 11731 --- [Thread-6] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-01-14 23:21:45.355  INFO 11731 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-01-14 23:21:45.356  INFO 11731 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-01-14 23:21:45.356  INFO 11731 --- [Thread-6] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-01-14 23:23:56.749  INFO 11795 --- [main] com.exercise.SpaceControllerTest         : Starting SpaceControllerTest on Arunimas-MBP with PID 11795 (started by agoel in /Users/agoel/Documents/projects/workspace/my-spaces-api)
+2018-01-14 23:23:56.750  INFO 11795 --- [main] com.exercise.SpaceControllerTest         : No active profile set, falling back to default profiles: default
+2018-01-14 23:23:56.779  INFO 11795 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1ed6388a: startup date [Sun Jan 14 23:23:56 CST 2018]; root of context hierarchy
+2018-01-14 23:23:58.489  INFO 11795 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:23:58.507  INFO 11795 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-01-14 23:23:58.567  INFO 11795 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-01-14 23:23:58.568  INFO 11795 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-01-14 23:23:58.569  INFO 11795 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-01-14 23:23:58.602  INFO 11795 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-01-14 23:23:58.750  INFO 11795 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.DerbyDialect
+2018-01-14 23:23:58.756  WARN 11795 --- [main] org.hibernate.dialect.DerbyDialect       : HHH000430: The DerbyDialect dialect has been deprecated; use one of the version-specific dialects instead
+2018-01-14 23:23:59.150  INFO 11795 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-01-14 23:23:59.151  WARN 11795 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 10000, SQLState: 01J01
+2018-01-14 23:23:59.152  WARN 11795 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database 'memory:testdb' not created, connection made to existing database instead.
+2018-01-14 23:23:59.152  INFO 11795 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-01-14 23:23:59.175  INFO 11795 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:23:59.576  INFO 11795 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@1ed6388a: startup date [Sun Jan 14 23:23:56 CST 2018]; root of context hierarchy
+2018-01-14 23:23:59.651  INFO 11795 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getSpace(java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:23:59.652  INFO 11795 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public java.lang.String com.exercise.controller.SpaceController.error()
+2018-01-14 23:23:59.653  INFO 11795 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllSpaces()
+2018-01-14 23:23:59.654  INFO 11795 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/entries]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllEntriesBySpace(java.lang.String)
+2018-01-14 23:23:59.654  INFO 11795 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/entries/{entryId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getEntryBySpaceIdAndEntryId(java.lang.String,java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:23:59.654  INFO 11795 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/assets]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllAssetsBySpace(java.lang.String)
+2018-01-14 23:23:59.654  INFO 11795 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/assets/{assetId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getAssetBySpaceIdAndAssetId(java.lang.String,java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:23:59.655  INFO 11795 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{userId}]}" onto public com.exercise.item.Item com.exercise.controller.UserController.getUser(java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:23:59.655  INFO 11795 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.UserController.getAllUsers()
+2018-01-14 23:23:59.680  INFO 11795 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:23:59.681  INFO 11795 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:23:59.696  INFO 11795 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in apiExceptionHandler
+2018-01-14 23:23:59.724  INFO 11795 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:23:59.985  INFO 11795 --- [main] com.exercise.SpaceControllerTest         : Started SpaceControllerTest in 3.587 seconds (JVM running for 4.243)
+2018-01-14 23:24:00.007  WARN 11795 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@124c278f] to process 'before' execution of test method [public void com.exercise.SpaceControllerTest.test()] for test instance [com.exercise.SpaceControllerTest@46612bfc]
+
+java.lang.NoSuchMethodError: org.mockito.internal.util.MockUtil.getMockSettings(Ljava/lang/Object;)Lorg/mockito/mock/MockCreationSettings;
+	at org.springframework.boot.test.mock.mockito.MockitoApi$Mockito1Api.getMockSettings(MockitoApi.java:119) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.MockReset.get(MockReset.java:108) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:69) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:55) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.beforeTestMethod(ResetMocksTestExecutionListener.java:45) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:269) ~[spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103) [surefire-booter-2.18.1.jar:2.18.1]
+
+2018-01-14 23:24:00.011  WARN 11795 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@124c278f] to process 'after' execution for test: method [public void com.exercise.SpaceControllerTest.test()], instance [com.exercise.SpaceControllerTest@46612bfc], exception [java.lang.NoSuchMethodError: org.mockito.internal.util.MockUtil.getMockSettings(Ljava/lang/Object;)Lorg/mockito/mock/MockCreationSettings;]
+
+java.lang.NoSuchMethodError: org.mockito.internal.util.MockUtil.getMockSettings(Ljava/lang/Object;)Lorg/mockito/mock/MockCreationSettings;
+	at org.springframework.boot.test.mock.mockito.MockitoApi$Mockito1Api.getMockSettings(MockitoApi.java:119) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.MockReset.get(MockReset.java:108) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:69) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:55) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.afterTestMethod(ResetMocksTestExecutionListener.java:50) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.test.context.TestContextManager.afterTestMethod(TestContextManager.java:319) ~[spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:94) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103) [surefire-booter-2.18.1.jar:2.18.1]
+
+2018-01-14 23:24:00.020  INFO 11795 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.exercise.MySpacesApiApplicationTests], using SpringBootContextLoader
+2018-01-14 23:24:00.021  INFO 11795 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.exercise.MySpacesApiApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-01-14 23:24:00.022  INFO 11795 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.exercise.MySpacesApiApplicationTests]: MySpacesApiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-01-14 23:24:00.025  INFO 11795 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.exercise.MySpacesApiApplication for test class com.exercise.MySpacesApiApplicationTests
+2018-01-14 23:24:00.027  INFO 11795 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-01-14 23:24:00.030  INFO 11795 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@200d1a3d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7de147e9, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@12567179, org.springframework.test.context.support.DirtiesContextTestExecutionListener@37d699a1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7f42b194, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@8eb6f9a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@29170a47, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2a8f8555, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@402b4f81, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@13ef7fa1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@23b1aa9, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@54489296]
+2018-01-14 23:24:00.070  INFO 11795 --- [main] c.exercise.MySpacesApiApplicationTests   : Starting MySpacesApiApplicationTests on Arunimas-MBP with PID 11795 (started by agoel in /Users/agoel/Documents/projects/workspace/my-spaces-api)
+2018-01-14 23:24:00.070  INFO 11795 --- [main] c.exercise.MySpacesApiApplicationTests   : No active profile set, falling back to default profiles: default
+2018-01-14 23:24:00.073  INFO 11795 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@48ccbb32: startup date [Sun Jan 14 23:24:00 CST 2018]; root of context hierarchy
+2018-01-14 23:24:00.484  INFO 11795 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:24:00.484  INFO 11795 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-01-14 23:24:00.487  INFO 11795 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.DerbyDialect
+2018-01-14 23:24:00.488  WARN 11795 --- [main] org.hibernate.dialect.DerbyDialect       : HHH000430: The DerbyDialect dialect has been deprecated; use one of the version-specific dialects instead
+2018-01-14 23:24:00.499  INFO 11795 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-01-14 23:24:00.500  WARN 11795 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 10000, SQLState: 01J01
+2018-01-14 23:24:00.501  WARN 11795 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database 'memory:testdb' not created, connection made to existing database instead.
+2018-01-14 23:24:00.501  INFO 11795 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-01-14 23:24:00.501  WARN 11795 --- [main] o.h.j.i.EntityManagerFactoryRegistry     : HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+2018-01-14 23:24:00.502  INFO 11795 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:24:00.705  INFO 11795 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@48ccbb32: startup date [Sun Jan 14 23:24:00 CST 2018]; root of context hierarchy
+2018-01-14 23:24:00.727  INFO 11795 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getSpace(java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:24:00.727  INFO 11795 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public java.lang.String com.exercise.controller.SpaceController.error()
+2018-01-14 23:24:00.728  INFO 11795 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllSpaces()
+2018-01-14 23:24:00.729  INFO 11795 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/entries]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllEntriesBySpace(java.lang.String)
+2018-01-14 23:24:00.729  INFO 11795 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/entries/{entryId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getEntryBySpaceIdAndEntryId(java.lang.String,java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:24:00.730  INFO 11795 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/assets]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllAssetsBySpace(java.lang.String)
+2018-01-14 23:24:00.730  INFO 11795 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/assets/{assetId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getAssetBySpaceIdAndAssetId(java.lang.String,java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:24:00.731  INFO 11795 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{userId}]}" onto public com.exercise.item.Item com.exercise.controller.UserController.getUser(java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:24:00.731  INFO 11795 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.UserController.getAllUsers()
+2018-01-14 23:24:00.751  INFO 11795 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:24:00.751  INFO 11795 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:24:00.765  INFO 11795 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in apiExceptionHandler
+2018-01-14 23:24:00.780  INFO 11795 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:24:00.960  INFO 11795 --- [main] c.exercise.MySpacesApiApplicationTests   : Started MySpacesApiApplicationTests in 0.922 seconds (JVM running for 5.219)
+2018-01-14 23:24:00.969  INFO 11795 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@1ed6388a: startup date [Sun Jan 14 23:23:56 CST 2018]; root of context hierarchy
+2018-01-14 23:24:00.969  INFO 11795 --- [Thread-6] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@48ccbb32: startup date [Sun Jan 14 23:24:00 CST 2018]; root of context hierarchy
+2018-01-14 23:24:00.972  INFO 11795 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:24:00.973  INFO 11795 --- [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:24:00.973  INFO 11795 --- [Thread-6] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-01-14 23:24:00.973  INFO 11795 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-01-14 23:24:00.974  INFO 11795 --- [Thread-6] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-01-14 23:24:00.974  INFO 11795 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-01-14 23:25:43.672  INFO 11829 --- [main] com.exercise.SpaceControllerTest         : Starting SpaceControllerTest on Arunimas-MBP with PID 11829 (started by agoel in /Users/agoel/Documents/projects/workspace/my-spaces-api)
+2018-01-14 23:25:43.673  INFO 11829 --- [main] com.exercise.SpaceControllerTest         : No active profile set, falling back to default profiles: default
+2018-01-14 23:25:43.702  INFO 11829 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1ed6388a: startup date [Sun Jan 14 23:25:43 CST 2018]; root of context hierarchy
+2018-01-14 23:25:45.409  INFO 11829 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:25:45.423  INFO 11829 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-01-14 23:25:45.486  INFO 11829 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-01-14 23:25:45.487  INFO 11829 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-01-14 23:25:45.488  INFO 11829 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-01-14 23:25:45.520  INFO 11829 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-01-14 23:25:45.660  INFO 11829 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.DerbyDialect
+2018-01-14 23:25:45.665  WARN 11829 --- [main] org.hibernate.dialect.DerbyDialect       : HHH000430: The DerbyDialect dialect has been deprecated; use one of the version-specific dialects instead
+2018-01-14 23:25:46.074  INFO 11829 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-01-14 23:25:46.076  WARN 11829 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 10000, SQLState: 01J01
+2018-01-14 23:25:46.076  WARN 11829 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database 'memory:testdb' not created, connection made to existing database instead.
+2018-01-14 23:25:46.076  INFO 11829 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-01-14 23:25:46.100  INFO 11829 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:25:46.534  INFO 11829 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@1ed6388a: startup date [Sun Jan 14 23:25:43 CST 2018]; root of context hierarchy
+2018-01-14 23:25:46.616  INFO 11829 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getSpace(java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:25:46.618  INFO 11829 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public java.lang.String com.exercise.controller.SpaceController.error()
+2018-01-14 23:25:46.618  INFO 11829 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/entries]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllEntriesBySpace(java.lang.String)
+2018-01-14 23:25:46.619  INFO 11829 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/entries/{entryId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getEntryBySpaceIdAndEntryId(java.lang.String,java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:25:46.619  INFO 11829 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/assets]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllAssetsBySpace(java.lang.String)
+2018-01-14 23:25:46.619  INFO 11829 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/assets/{assetId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getAssetBySpaceIdAndAssetId(java.lang.String,java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:25:46.619  INFO 11829 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllSpaces()
+2018-01-14 23:25:46.620  INFO 11829 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{userId}]}" onto public com.exercise.item.Item com.exercise.controller.UserController.getUser(java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:25:46.620  INFO 11829 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.UserController.getAllUsers()
+2018-01-14 23:25:46.645  INFO 11829 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:25:46.646  INFO 11829 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:25:46.661  INFO 11829 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in apiExceptionHandler
+2018-01-14 23:25:46.681  INFO 11829 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:25:46.880  INFO 11829 --- [main] com.exercise.SpaceControllerTest         : Started SpaceControllerTest in 3.494 seconds (JVM running for 4.129)
+2018-01-14 23:25:46.897  WARN 11829 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@124c278f] to process 'before' execution of test method [public void com.exercise.SpaceControllerTest.test()] for test instance [com.exercise.SpaceControllerTest@6818fd48]
+
+java.lang.NoSuchMethodError: org.mockito.internal.util.MockUtil.getMockSettings(Ljava/lang/Object;)Lorg/mockito/mock/MockCreationSettings;
+	at org.springframework.boot.test.mock.mockito.MockitoApi$Mockito1Api.getMockSettings(MockitoApi.java:119) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.MockReset.get(MockReset.java:108) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:69) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:55) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.beforeTestMethod(ResetMocksTestExecutionListener.java:45) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:269) ~[spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103) [surefire-booter-2.18.1.jar:2.18.1]
+
+2018-01-14 23:25:46.900  WARN 11829 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@124c278f] to process 'after' execution for test: method [public void com.exercise.SpaceControllerTest.test()], instance [com.exercise.SpaceControllerTest@6818fd48], exception [java.lang.NoSuchMethodError: org.mockito.internal.util.MockUtil.getMockSettings(Ljava/lang/Object;)Lorg/mockito/mock/MockCreationSettings;]
+
+java.lang.NoSuchMethodError: org.mockito.internal.util.MockUtil.getMockSettings(Ljava/lang/Object;)Lorg/mockito/mock/MockCreationSettings;
+	at org.springframework.boot.test.mock.mockito.MockitoApi$Mockito1Api.getMockSettings(MockitoApi.java:119) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.MockReset.get(MockReset.java:108) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:69) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:55) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.afterTestMethod(ResetMocksTestExecutionListener.java:50) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.test.context.TestContextManager.afterTestMethod(TestContextManager.java:319) ~[spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:94) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103) [surefire-booter-2.18.1.jar:2.18.1]
+
+2018-01-14 23:25:46.908  INFO 11829 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.exercise.MySpacesApiApplicationTests], using SpringBootContextLoader
+2018-01-14 23:25:46.908  INFO 11829 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.exercise.MySpacesApiApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-01-14 23:25:46.908  INFO 11829 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.exercise.MySpacesApiApplicationTests]: MySpacesApiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-01-14 23:25:46.910  INFO 11829 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.exercise.MySpacesApiApplication for test class com.exercise.MySpacesApiApplicationTests
+2018-01-14 23:25:46.912  INFO 11829 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-01-14 23:25:46.914  INFO 11829 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@29170a47, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2a8f8555, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@402b4f81, org.springframework.test.context.support.DirtiesContextTestExecutionListener@13ef7fa1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@23b1aa9, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@54489296, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4e8598d9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@267ff4df, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7c4b5ceb, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6c07add6, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@e26a3df, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@57a667c8]
+2018-01-14 23:25:46.953  INFO 11829 --- [main] c.exercise.MySpacesApiApplicationTests   : Starting MySpacesApiApplicationTests on Arunimas-MBP with PID 11829 (started by agoel in /Users/agoel/Documents/projects/workspace/my-spaces-api)
+2018-01-14 23:25:46.953  INFO 11829 --- [main] c.exercise.MySpacesApiApplicationTests   : No active profile set, falling back to default profiles: default
+2018-01-14 23:25:46.956  INFO 11829 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@26d0ece6: startup date [Sun Jan 14 23:25:46 CST 2018]; root of context hierarchy
+2018-01-14 23:25:47.337  INFO 11829 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:25:47.337  INFO 11829 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-01-14 23:25:47.340  INFO 11829 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.DerbyDialect
+2018-01-14 23:25:47.341  WARN 11829 --- [main] org.hibernate.dialect.DerbyDialect       : HHH000430: The DerbyDialect dialect has been deprecated; use one of the version-specific dialects instead
+2018-01-14 23:25:47.351  INFO 11829 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-01-14 23:25:47.352  WARN 11829 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 10000, SQLState: 01J01
+2018-01-14 23:25:47.352  WARN 11829 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database 'memory:testdb' not created, connection made to existing database instead.
+2018-01-14 23:25:47.352  INFO 11829 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-01-14 23:25:47.353  WARN 11829 --- [main] o.h.j.i.EntityManagerFactoryRegistry     : HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+2018-01-14 23:25:47.353  INFO 11829 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:25:47.545  INFO 11829 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@26d0ece6: startup date [Sun Jan 14 23:25:46 CST 2018]; root of context hierarchy
+2018-01-14 23:25:47.562  INFO 11829 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getSpace(java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:25:47.562  INFO 11829 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public java.lang.String com.exercise.controller.SpaceController.error()
+2018-01-14 23:25:47.563  INFO 11829 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/entries]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllEntriesBySpace(java.lang.String)
+2018-01-14 23:25:47.563  INFO 11829 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/entries/{entryId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getEntryBySpaceIdAndEntryId(java.lang.String,java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:25:47.584  INFO 11829 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/assets]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllAssetsBySpace(java.lang.String)
+2018-01-14 23:25:47.584  INFO 11829 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/assets/{assetId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getAssetBySpaceIdAndAssetId(java.lang.String,java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:25:47.584  INFO 11829 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllSpaces()
+2018-01-14 23:25:47.584  INFO 11829 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{userId}]}" onto public com.exercise.item.Item com.exercise.controller.UserController.getUser(java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:25:47.585  INFO 11829 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.UserController.getAllUsers()
+2018-01-14 23:25:47.606  INFO 11829 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:25:47.606  INFO 11829 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:25:47.615  INFO 11829 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in apiExceptionHandler
+2018-01-14 23:25:47.627  INFO 11829 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:25:47.783  INFO 11829 --- [main] c.exercise.MySpacesApiApplicationTests   : Started MySpacesApiApplicationTests in 0.862 seconds (JVM running for 5.032)
+2018-01-14 23:25:47.789  INFO 11829 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@1ed6388a: startup date [Sun Jan 14 23:25:43 CST 2018]; root of context hierarchy
+2018-01-14 23:25:47.790  INFO 11829 --- [Thread-6] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@26d0ece6: startup date [Sun Jan 14 23:25:46 CST 2018]; root of context hierarchy
+2018-01-14 23:25:47.794  INFO 11829 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:25:47.794  INFO 11829 --- [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:25:47.794  INFO 11829 --- [Thread-6] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-01-14 23:25:47.794  INFO 11829 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-01-14 23:25:47.795  INFO 11829 --- [Thread-6] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-01-14 23:25:47.795  INFO 11829 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-01-14 23:27:40.611  INFO 11895 --- [main] com.exercise.SpaceControllerTest         : Starting SpaceControllerTest on Arunimas-MBP with PID 11895 (started by agoel in /Users/agoel/Documents/projects/workspace/my-spaces-api)
+2018-01-14 23:27:40.612  INFO 11895 --- [main] com.exercise.SpaceControllerTest         : No active profile set, falling back to default profiles: default
+2018-01-14 23:27:40.642  INFO 11895 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1ed6388a: startup date [Sun Jan 14 23:27:40 CST 2018]; root of context hierarchy
+2018-01-14 23:27:42.376  INFO 11895 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:27:42.391  INFO 11895 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-01-14 23:27:42.449  INFO 11895 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-01-14 23:27:42.450  INFO 11895 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-01-14 23:27:42.452  INFO 11895 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-01-14 23:27:42.484  INFO 11895 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-01-14 23:27:42.633  INFO 11895 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.DerbyDialect
+2018-01-14 23:27:42.638  WARN 11895 --- [main] org.hibernate.dialect.DerbyDialect       : HHH000430: The DerbyDialect dialect has been deprecated; use one of the version-specific dialects instead
+2018-01-14 23:27:43.037  INFO 11895 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-01-14 23:27:43.039  WARN 11895 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 10000, SQLState: 01J01
+2018-01-14 23:27:43.039  WARN 11895 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database 'memory:testdb' not created, connection made to existing database instead.
+2018-01-14 23:27:43.039  INFO 11895 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-01-14 23:27:43.061  INFO 11895 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:27:43.490  INFO 11895 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@1ed6388a: startup date [Sun Jan 14 23:27:40 CST 2018]; root of context hierarchy
+2018-01-14 23:27:43.575  INFO 11895 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getSpace(java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:27:43.577  INFO 11895 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public java.lang.String com.exercise.controller.SpaceController.error()
+2018-01-14 23:27:43.578  INFO 11895 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllSpaces()
+2018-01-14 23:27:43.578  INFO 11895 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/entries]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllEntriesBySpace(java.lang.String)
+2018-01-14 23:27:43.578  INFO 11895 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/entries/{entryId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getEntryBySpaceIdAndEntryId(java.lang.String,java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:27:43.579  INFO 11895 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/assets]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllAssetsBySpace(java.lang.String)
+2018-01-14 23:27:43.579  INFO 11895 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/assets/{assetId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getAssetBySpaceIdAndAssetId(java.lang.String,java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:27:43.579  INFO 11895 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.UserController.getAllUsers()
+2018-01-14 23:27:43.580  INFO 11895 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{userId}]}" onto public com.exercise.item.Item com.exercise.controller.UserController.getUser(java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:27:43.603  INFO 11895 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:27:43.603  INFO 11895 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:27:43.616  INFO 11895 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in apiExceptionHandler
+2018-01-14 23:27:43.635  INFO 11895 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:27:43.844  INFO 11895 --- [main] com.exercise.SpaceControllerTest         : Started SpaceControllerTest in 3.466 seconds (JVM running for 4.112)
+2018-01-14 23:27:43.863  WARN 11895 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@124c278f] to process 'before' execution of test method [public void com.exercise.SpaceControllerTest.test()] for test instance [com.exercise.SpaceControllerTest@267891bf]
+
+java.lang.NoSuchMethodError: org.mockito.internal.util.MockUtil.getMockSettings(Ljava/lang/Object;)Lorg/mockito/mock/MockCreationSettings;
+	at org.springframework.boot.test.mock.mockito.MockitoApi$Mockito1Api.getMockSettings(MockitoApi.java:119) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.MockReset.get(MockReset.java:108) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:69) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:55) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.beforeTestMethod(ResetMocksTestExecutionListener.java:45) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:269) ~[spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103) [surefire-booter-2.18.1.jar:2.18.1]
+
+2018-01-14 23:27:43.867  WARN 11895 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@124c278f] to process 'after' execution for test: method [public void com.exercise.SpaceControllerTest.test()], instance [com.exercise.SpaceControllerTest@267891bf], exception [java.lang.NoSuchMethodError: org.mockito.internal.util.MockUtil.getMockSettings(Ljava/lang/Object;)Lorg/mockito/mock/MockCreationSettings;]
+
+java.lang.NoSuchMethodError: org.mockito.internal.util.MockUtil.getMockSettings(Ljava/lang/Object;)Lorg/mockito/mock/MockCreationSettings;
+	at org.springframework.boot.test.mock.mockito.MockitoApi$Mockito1Api.getMockSettings(MockitoApi.java:119) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.MockReset.get(MockReset.java:108) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:69) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:55) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.afterTestMethod(ResetMocksTestExecutionListener.java:50) ~[spring-boot-test-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.test.context.TestContextManager.afterTestMethod(TestContextManager.java:319) ~[spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:94) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103) [surefire-booter-2.18.1.jar:2.18.1]
+
+2018-01-14 23:27:43.875  INFO 11895 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.exercise.MySpacesApiApplicationTests], using SpringBootContextLoader
+2018-01-14 23:27:43.875  INFO 11895 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.exercise.MySpacesApiApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-01-14 23:27:43.875  INFO 11895 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.exercise.MySpacesApiApplicationTests]: MySpacesApiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-01-14 23:27:43.878  INFO 11895 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.exercise.MySpacesApiApplication for test class com.exercise.MySpacesApiApplicationTests
+2018-01-14 23:27:43.881  INFO 11895 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-01-14 23:27:43.883  INFO 11895 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@935d3f9, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@214b342f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5db0003d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7f12094d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@589fb74d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@200d1a3d, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7de147e9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@12567179, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@37d699a1, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7f42b194, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@8eb6f9a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@29170a47]
+2018-01-14 23:27:43.920  INFO 11895 --- [main] c.exercise.MySpacesApiApplicationTests   : Starting MySpacesApiApplicationTests on Arunimas-MBP with PID 11895 (started by agoel in /Users/agoel/Documents/projects/workspace/my-spaces-api)
+2018-01-14 23:27:43.920  INFO 11895 --- [main] c.exercise.MySpacesApiApplicationTests   : No active profile set, falling back to default profiles: default
+2018-01-14 23:27:43.924  INFO 11895 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6b16de91: startup date [Sun Jan 14 23:27:43 CST 2018]; root of context hierarchy
+2018-01-14 23:27:44.309  INFO 11895 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:27:44.310  INFO 11895 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-01-14 23:27:44.314  INFO 11895 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.DerbyDialect
+2018-01-14 23:27:44.314  WARN 11895 --- [main] org.hibernate.dialect.DerbyDialect       : HHH000430: The DerbyDialect dialect has been deprecated; use one of the version-specific dialects instead
+2018-01-14 23:27:44.324  INFO 11895 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-01-14 23:27:44.325  WARN 11895 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 10000, SQLState: 01J01
+2018-01-14 23:27:44.325  WARN 11895 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database 'memory:testdb' not created, connection made to existing database instead.
+2018-01-14 23:27:44.325  INFO 11895 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-01-14 23:27:44.325  WARN 11895 --- [main] o.h.j.i.EntityManagerFactoryRegistry     : HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+2018-01-14 23:27:44.325  INFO 11895 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:27:44.484  INFO 11895 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6b16de91: startup date [Sun Jan 14 23:27:43 CST 2018]; root of context hierarchy
+2018-01-14 23:27:44.500  INFO 11895 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getSpace(java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:27:44.500  INFO 11895 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public java.lang.String com.exercise.controller.SpaceController.error()
+2018-01-14 23:27:44.500  INFO 11895 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllSpaces()
+2018-01-14 23:27:44.501  INFO 11895 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/entries]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllEntriesBySpace(java.lang.String)
+2018-01-14 23:27:44.501  INFO 11895 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/entries/{entryId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getEntryBySpaceIdAndEntryId(java.lang.String,java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:27:44.501  INFO 11895 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/assets]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllAssetsBySpace(java.lang.String)
+2018-01-14 23:27:44.501  INFO 11895 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/assets/{assetId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getAssetBySpaceIdAndAssetId(java.lang.String,java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:27:44.502  INFO 11895 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.UserController.getAllUsers()
+2018-01-14 23:27:44.502  INFO 11895 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{userId}]}" onto public com.exercise.item.Item com.exercise.controller.UserController.getUser(java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:27:44.519  INFO 11895 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:27:44.519  INFO 11895 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:27:44.527  INFO 11895 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in apiExceptionHandler
+2018-01-14 23:27:44.540  INFO 11895 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:27:44.689  INFO 11895 --- [main] c.exercise.MySpacesApiApplicationTests   : Started MySpacesApiApplicationTests in 0.799 seconds (JVM running for 4.958)
+2018-01-14 23:27:44.698  INFO 11895 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@1ed6388a: startup date [Sun Jan 14 23:27:40 CST 2018]; root of context hierarchy
+2018-01-14 23:27:44.698  INFO 11895 --- [Thread-6] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@6b16de91: startup date [Sun Jan 14 23:27:43 CST 2018]; root of context hierarchy
+2018-01-14 23:27:44.701  INFO 11895 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:27:44.701  INFO 11895 --- [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:27:44.701  INFO 11895 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-01-14 23:27:44.701  INFO 11895 --- [Thread-6] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-01-14 23:27:44.702  INFO 11895 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-01-14 23:27:44.702  INFO 11895 --- [Thread-6] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-01-14 23:46:13.884  INFO 11994 --- [main] com.exercise.SpaceControllerTest         : Starting SpaceControllerTest on Arunimas-MBP with PID 11994 (started by agoel in /Users/agoel/Documents/projects/workspace/my-spaces-api)
+2018-01-14 23:46:13.887  INFO 11994 --- [main] com.exercise.SpaceControllerTest         : No active profile set, falling back to default profiles: default
+2018-01-14 23:46:13.916  INFO 11994 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2e6a8155: startup date [Sun Jan 14 23:46:13 CST 2018]; root of context hierarchy
+2018-01-14 23:46:15.634  INFO 11994 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:46:15.649  INFO 11994 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-01-14 23:46:15.706  INFO 11994 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-01-14 23:46:15.707  INFO 11994 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-01-14 23:46:15.709  INFO 11994 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-01-14 23:46:15.740  INFO 11994 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-01-14 23:46:15.889  INFO 11994 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.DerbyDialect
+2018-01-14 23:46:15.894  WARN 11994 --- [main] org.hibernate.dialect.DerbyDialect       : HHH000430: The DerbyDialect dialect has been deprecated; use one of the version-specific dialects instead
+2018-01-14 23:46:16.305  INFO 11994 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-01-14 23:46:16.307  WARN 11994 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 10000, SQLState: 01J01
+2018-01-14 23:46:16.307  WARN 11994 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database 'memory:testdb' not created, connection made to existing database instead.
+2018-01-14 23:46:16.308  INFO 11994 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-01-14 23:46:16.333  INFO 11994 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:46:16.790  INFO 11994 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@2e6a8155: startup date [Sun Jan 14 23:46:13 CST 2018]; root of context hierarchy
+2018-01-14 23:46:16.874  INFO 11994 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getSpace(java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:46:16.875  INFO 11994 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public java.lang.String com.exercise.controller.SpaceController.error()
+2018-01-14 23:46:16.876  INFO 11994 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/entries]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllEntriesBySpace(java.lang.String)
+2018-01-14 23:46:16.876  INFO 11994 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/entries/{entryId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getEntryBySpaceIdAndEntryId(java.lang.String,java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:46:16.877  INFO 11994 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/assets]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllAssetsBySpace(java.lang.String)
+2018-01-14 23:46:16.877  INFO 11994 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/assets/{assetId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getAssetBySpaceIdAndAssetId(java.lang.String,java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:46:16.877  INFO 11994 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllSpaces()
+2018-01-14 23:46:16.878  INFO 11994 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{userId}]}" onto public com.exercise.item.Item com.exercise.controller.UserController.getUser(java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:46:16.878  INFO 11994 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.UserController.getAllUsers()
+2018-01-14 23:46:16.903  INFO 11994 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:46:16.904  INFO 11994 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:46:16.919  INFO 11994 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in apiExceptionHandler
+2018-01-14 23:46:16.943  INFO 11994 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:46:17.149  INFO 11994 --- [main] com.exercise.SpaceControllerTest         : Started SpaceControllerTest in 3.542 seconds (JVM running for 4.168)
+2018-01-14 23:46:17.167  INFO 11994 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.exercise.MySpacesApiApplicationTests], using SpringBootContextLoader
+2018-01-14 23:46:17.168  INFO 11994 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.exercise.MySpacesApiApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-01-14 23:46:17.168  INFO 11994 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.exercise.MySpacesApiApplicationTests]: MySpacesApiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-01-14 23:46:17.171  INFO 11994 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.exercise.MySpacesApiApplication for test class com.exercise.MySpacesApiApplicationTests
+2018-01-14 23:46:17.173  INFO 11994 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-01-14 23:46:17.175  INFO 11994 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@29170a47, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2a8f8555, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@402b4f81, org.springframework.test.context.support.DirtiesContextTestExecutionListener@13ef7fa1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@23b1aa9, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@54489296, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4e8598d9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@267ff4df, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7c4b5ceb, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6c07add6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@e26a3df, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@57a667c8]
+2018-01-14 23:46:17.218  INFO 11994 --- [main] c.exercise.MySpacesApiApplicationTests   : Starting MySpacesApiApplicationTests on Arunimas-MBP with PID 11994 (started by agoel in /Users/agoel/Documents/projects/workspace/my-spaces-api)
+2018-01-14 23:46:17.218  INFO 11994 --- [main] c.exercise.MySpacesApiApplicationTests   : No active profile set, falling back to default profiles: default
+2018-01-14 23:46:17.221  INFO 11994 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@26d0ece6: startup date [Sun Jan 14 23:46:17 CST 2018]; root of context hierarchy
+2018-01-14 23:46:17.598  INFO 11994 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:46:17.599  INFO 11994 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-01-14 23:46:17.602  INFO 11994 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.DerbyDialect
+2018-01-14 23:46:17.603  WARN 11994 --- [main] org.hibernate.dialect.DerbyDialect       : HHH000430: The DerbyDialect dialect has been deprecated; use one of the version-specific dialects instead
+2018-01-14 23:46:17.611  INFO 11994 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-01-14 23:46:17.612  WARN 11994 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 10000, SQLState: 01J01
+2018-01-14 23:46:17.612  WARN 11994 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database 'memory:testdb' not created, connection made to existing database instead.
+2018-01-14 23:46:17.612  INFO 11994 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-01-14 23:46:17.613  WARN 11994 --- [main] o.h.j.i.EntityManagerFactoryRegistry     : HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+2018-01-14 23:46:17.613  INFO 11994 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:46:17.799  INFO 11994 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@26d0ece6: startup date [Sun Jan 14 23:46:17 CST 2018]; root of context hierarchy
+2018-01-14 23:46:17.815  INFO 11994 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getSpace(java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:46:17.816  INFO 11994 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public java.lang.String com.exercise.controller.SpaceController.error()
+2018-01-14 23:46:17.816  INFO 11994 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/entries]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllEntriesBySpace(java.lang.String)
+2018-01-14 23:46:17.816  INFO 11994 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/entries/{entryId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getEntryBySpaceIdAndEntryId(java.lang.String,java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:46:17.816  INFO 11994 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/assets]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllAssetsBySpace(java.lang.String)
+2018-01-14 23:46:17.817  INFO 11994 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces/{spaceId}/assets/{assetId}]}" onto public com.exercise.item.Item com.exercise.controller.SpaceController.getAssetBySpaceIdAndAssetId(java.lang.String,java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:46:17.817  INFO 11994 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spaces]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.SpaceController.getAllSpaces()
+2018-01-14 23:46:17.817  INFO 11994 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{userId}]}" onto public com.exercise.item.Item com.exercise.controller.UserController.getUser(java.lang.String) throws com.exercise.exceptions.ItemNotFoundException
+2018-01-14 23:46:17.818  INFO 11994 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users]}" onto public java.util.List<com.exercise.item.Item> com.exercise.controller.UserController.getAllUsers()
+2018-01-14 23:46:17.837  INFO 11994 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:46:17.837  INFO 11994 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:46:17.848  INFO 11994 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in apiExceptionHandler
+2018-01-14 23:46:17.861  INFO 11994 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-14 23:46:18.003  INFO 11994 --- [main] c.exercise.MySpacesApiApplicationTests   : Started MySpacesApiApplicationTests in 0.822 seconds (JVM running for 5.022)
+2018-01-14 23:46:18.010  INFO 11994 --- [Thread-6] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@26d0ece6: startup date [Sun Jan 14 23:46:17 CST 2018]; root of context hierarchy
+2018-01-14 23:46:18.010  INFO 11994 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@2e6a8155: startup date [Sun Jan 14 23:46:13 CST 2018]; root of context hierarchy
+2018-01-14 23:46:18.013  INFO 11994 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:46:18.013  INFO 11994 --- [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-01-14 23:46:18.014  INFO 11994 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-01-14 23:46:18.014  INFO 11994 --- [Thread-6] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-01-14 23:46:18.014  INFO 11994 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-01-14 23:46:18.014  INFO 11994 --- [Thread-6] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete

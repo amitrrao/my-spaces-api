@@ -6,14 +6,14 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.exercise.controller.SpaceController;
+import com.exercise.service.SpaceService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class SpaceControllerTest {
 	
-//	@MockBean
-//	private SpaceController spaceControllerMock;
+	@MockBean
+	private SpaceService spaceServicerMock;
 
 	@Test
 	public void test() {
