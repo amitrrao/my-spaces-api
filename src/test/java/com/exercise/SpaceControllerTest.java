@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -18,6 +19,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import com.exercise.base.Type;
+import com.exercise.controller.SpaceController;
 import com.exercise.data.TestData;
 import com.exercise.exceptions.ItemNotFoundException;
 import com.exercise.service.AssetService;
@@ -25,7 +27,7 @@ import com.exercise.service.EntryService;
 import com.exercise.service.SpaceService;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@WebMvcTest(SpaceController.class)
 public class SpaceControllerTest {
 
 	private MockMvc mockMvc;
