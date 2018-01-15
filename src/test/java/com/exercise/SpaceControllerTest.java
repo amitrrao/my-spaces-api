@@ -17,8 +17,11 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import com.exercise.base.Type;
 import com.exercise.data.TestData;
+import com.exercise.exceptions.ItemNotFoundException;
 import com.exercise.service.AssetService;
+import com.exercise.service.EntryService;
 import com.exercise.service.SpaceService;
 
 @RunWith(SpringRunner.class)
@@ -32,6 +35,9 @@ public class SpaceControllerTest {
 	
 	@MockBean
 	private AssetService mockAssetService;
+	
+	@MockBean
+	private EntryService mockEntryService;
 
 	@Autowired
 	private WebApplicationContext webApplicationContext;
@@ -62,9 +68,19 @@ public class SpaceControllerTest {
 	}
 	
 	@Test
+	public void getSpace_NotFound() throws Exception {
+		given(mockSpaceService.getSpace("yadj1kx9rmg01"))
+		.willThrow(new ItemNotFoundException(Type.SPACE.getType() + " not found."));
+		
+		mockMvc.perform(get("/spaces/yadj1kx9rmg01"))
+		.andExpect(status().is(404))
+		.andExpect(jsonPath("$.message", is("Space not found.")));
+	}
+	
+	@Test
 	public void getEntriesBySpace_Success() throws Exception {
-		given(mockAssetService.getAllAssetsBySpace("yadj1kx9rmg0"))
-		.willReturn(TestData.ASSETS);
+		given(mockEntryService.getAllEntriesBySpace("yadj1kx9rmg0"))
+		.willReturn(TestData.ENTRIES);
 
 		mockMvc.perform(get("/spaces/yadj1kx9rmg0/entries"))
 		.andExpect(status().is(200))
@@ -74,7 +90,71 @@ public class SpaceControllerTest {
 		.andExpect(jsonPath("$.[0].sys.id", is("5KsDBWseXY6QegucYAoacS1")))
 		.andExpect(jsonPath("$.[1].sys.id", is("5KsDBWseXY6QegucYAoacS2")))
 		.andExpect(jsonPath("$.[2].sys.id", is("5KsDBWseXY6QegucYAoacS3")));
+	}
+	
+	@Test
+	public void getEntriesBySpaceIdAndEntryId_Success() throws Exception {
+		given(mockEntryService.getEntryBySpaceIdAndEntryId("yadj1kx9rmg0", "5KsDBWseXY6QegucYAoacS1"))
+		.willReturn(TestData.ENTRY1);
 
+		mockMvc.perform(get("/spaces/yadj1kx9rmg0/entries/5KsDBWseXY6QegucYAoacS1"))
+		.andExpect(status().is(200))
+		.andExpect(jsonPath("$.fields.title", is("Hello, World!")))
+		.andExpect(jsonPath("$.sys.id", is("5KsDBWseXY6QegucYAoacS1")));
+	}
+	
+	@Test
+	public void getEntriesBySpaceIdAndEntryId_NotFound() throws Exception {
+		given(mockEntryService.getEntryBySpaceIdAndEntryId("yadj1kx9rmg0", "5KsDBWseXY6QegucYAoacS11"))
+		.willThrow(new ItemNotFoundException(Type.ENTRY.getType() + " not found."));
+
+		mockMvc.perform(get("/spaces/yadj1kx9rmg0/entries/5KsDBWseXY6QegucYAoacS11"))
+		.andExpect(status().is(404))
+		.andExpect(jsonPath("$.message", is("Entry not found.")));
+	}
+	
+	@Test
+	public void getAssetsBySpace_Success() throws Exception {
+		given(mockAssetService.getAllAssetsBySpace("yadj1kx9rmg0"))
+		.willReturn(TestData.ASSETS);
+
+		mockMvc.perform(get("/spaces/yadj1kx9rmg0/assets"))
+		.andExpect(status().is(200))
+		.andExpect(jsonPath("$.[0].fields.title", is("Hero Collaboration Partial")))
+		.andExpect(jsonPath("$.[1].fields.title", is("Stride Chat")))
+		.andExpect(jsonPath("$.[2].fields.title", is("Get Started")))
+		.andExpect(jsonPath("$.[0].sys.id", is("wtrHxeu3zEoEce2MokCSi1")))
+		.andExpect(jsonPath("$.[1].sys.id", is("wtrHxeu3zEoEce2MokCSi2")))
+		.andExpect(jsonPath("$.[2].sys.id", is("wtrHxeu3zEoEce2MokCSi3")));
 	}
 
+	@Test
+	public void getAssetsBySpaceIdAndAssetId_Success() throws Exception {
+		given(mockAssetService.getAssetBySpaceIdAndAssetId("yadj1kx9rmg0", "wtrHxeu3zEoEce2MokCSi1"))
+		.willReturn(TestData.ASSET1);
+
+		mockMvc.perform(get("/spaces/yadj1kx9rmg0/assets/wtrHxeu3zEoEce2MokCSi1"))
+		.andExpect(status().is(200))
+		.andExpect(jsonPath("$.fields.title", is("Hero Collaboration Partial")))
+		.andExpect(jsonPath("$.sys.id", is("wtrHxeu3zEoEce2MokCSi1")));
+	}
+	
+
+	@Test
+	public void getAssetsBySpaceIdAndAssetId_NotFound() throws Exception {
+		given(mockAssetService.getAssetBySpaceIdAndAssetId("yadj1kx9rmg0", "wtrHxeu3zEoEce2MokCSi11"))
+		.willThrow(new ItemNotFoundException(Type.ASSET.getType() + " not found."));
+
+		mockMvc.perform(get("/spaces/yadj1kx9rmg0/assets/wtrHxeu3zEoEce2MokCSi11"))
+		.andExpect(status().is(404))
+		.andExpect(jsonPath("$.message", is("Asset not found.")));
+	}
+	
+	//TODO: what to expect here?
+	@Test
+	public void testInvalidUrl() throws Exception {
+		mockMvc.perform(get("/spac"))
+		.andExpect(status().is(404)); // TODO: 404? or 400?
+	}
+	
 }
