@@ -17,11 +17,10 @@ import com.exercise.item.Item;
 import com.exercise.service.AssetService;
 import com.exercise.service.EntryService;
 import com.exercise.service.SpaceService;
-import com.exercise.service.UserService;
 
 /**
  * 
- * This is our Controller class that maps incoming REST calls to appropriate service methods.
+ * This is a Space Controller class that maps incoming REST calls to appropriate service methods.
  * It injects singletons for the service instances and calls methods on them based on the request mapping.
  * 
  */
@@ -37,8 +36,6 @@ public class SpaceController implements ErrorController {
 	private EntryService entryService;
 	@Autowired
 	private AssetService assetService;
-	@Autowired
-	private UserService userService;
 	
 	@RequestMapping("/spaces")
 	public List<Item> getAllSpaces() {
@@ -74,18 +71,6 @@ public class SpaceController implements ErrorController {
 	@RequestMapping("/spaces/{spaceId}/assets/{assetId}")
 	public Item getAssetBySpaceIdAndAssetId(@PathVariable(required = true) String spaceId, @PathVariable(required = true) String assetId) throws ItemNotFoundException {
 		return assetService.getAssetBySpaceIdAndAssetId(spaceId, assetId);
-	}
-	
-	@RequestMapping("/users")
-	public List<Item> getAllUsers() {
-		List<Item> users = userService.getAllUsers();
-		logger.info(String.format("Total number of users: %d", users.size()));
-		return users;
-	}
-	
-	@RequestMapping("/users/{userId}")
-	public Item getUser(@PathVariable(required = true) String userId) throws ItemNotFoundException {
-		return userService.getUser(userId);
 	}
 
 	@RequestMapping(value = INVALID_PATH)
