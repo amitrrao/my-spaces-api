@@ -23,6 +23,16 @@ import com.exercise.data.TestData;
 import com.exercise.exceptions.ItemNotFoundException;
 import com.exercise.service.UserService;
 
+/**
+ * Unit tests for testing the UserController.
+ * 
+ * Note: Mocking the service is redundant here since all the data in the service is coming
+ * from the TestData class. These tests are written considering that the data will eventually
+ * reside in the database.
+ * 
+ * @author arao
+ *
+ */
 @RunWith(SpringRunner.class)
 @WebMvcTest(UserController.class)
 public class UserControllerTest {

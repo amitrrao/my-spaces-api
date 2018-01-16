@@ -13,6 +13,7 @@ import com.exercise.item.Item;
  * 
  * This is the UserBuilder class that is responsible for building a User instance.
  *
+ * @author arao
  */
 public class UserBuilder implements Builder {
 	

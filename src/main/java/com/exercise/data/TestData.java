@@ -12,6 +12,12 @@ import com.exercise.builder.SpaceBuilder;
 import com.exercise.builder.UserBuilder;
 import com.exercise.item.Item;
 
+/**
+ * This class contains all the test data.
+ * 
+ * @author arao
+ *
+ */
 public class TestData {
 	/**
 	 * Test data for Spaces.

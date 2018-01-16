@@ -25,6 +25,16 @@ import com.exercise.service.AssetService;
 import com.exercise.service.EntryService;
 import com.exercise.service.SpaceService;
 
+/**
+ * Unit tests for testing the SpaceController.
+ * 
+ * Note: Mocking the service is redundant here since all the data in the service is coming
+ * from the TestData class. These tests are written considering that the data will eventually
+ * reside in the database.
+ * 
+ * @author arao
+ *
+ */
 @RunWith(SpringRunner.class)
 @WebMvcTest(SpaceController.class)
 public class SpaceControllerTest {
@@ -94,6 +104,16 @@ public class SpaceControllerTest {
 	}
 	
 	@Test
+	public void getEntriesBySpace_SpaceNotFound() throws Exception {
+		given(mockEntryService.getAllEntriesBySpace("yadj1kx9rmg0123"))
+		.willThrow(new ItemNotFoundException(Type.SPACE.getType() + " not found."));
+
+		mockMvc.perform(get("/spaces/yadj1kx9rmg0123/entries"))
+		.andExpect(status().is(404))
+		.andExpect(jsonPath("$.message", is("Space not found.")));
+	}
+	
+	@Test
 	public void getEntriesBySpaceIdAndEntryId_Success() throws Exception {
 		given(mockEntryService.getEntryBySpaceIdAndEntryId("yadj1kx9rmg0", "5KsDBWseXY6QegucYAoacS1"))
 		.willReturn(TestData.ENTRY1);
@@ -105,7 +125,17 @@ public class SpaceControllerTest {
 	}
 	
 	@Test
-	public void getEntriesBySpaceIdAndEntryId_NotFound() throws Exception {
+	public void getEntriesBySpaceIdAndEntryId_SpaceNotFound() throws Exception {
+		given(mockEntryService.getEntryBySpaceIdAndEntryId("yadj1kx9rmg0123", "5KsDBWseXY6QegucYAoacS11"))
+		.willThrow(new ItemNotFoundException(Type.SPACE.getType() + " not found."));
+
+		mockMvc.perform(get("/spaces/yadj1kx9rmg0123/entries/5KsDBWseXY6QegucYAoacS11"))
+		.andExpect(status().is(404))
+		.andExpect(jsonPath("$.message", is("Space not found.")));
+	}
+
+	@Test
+	public void getEntriesBySpaceIdAndEntryId_EntryNotFound() throws Exception {
 		given(mockEntryService.getEntryBySpaceIdAndEntryId("yadj1kx9rmg0", "5KsDBWseXY6QegucYAoacS11"))
 		.willThrow(new ItemNotFoundException(Type.ENTRY.getType() + " not found."));
 
@@ -128,6 +158,16 @@ public class SpaceControllerTest {
 		.andExpect(jsonPath("$.[1].sys.id", is("wtrHxeu3zEoEce2MokCSi2")))
 		.andExpect(jsonPath("$.[2].sys.id", is("wtrHxeu3zEoEce2MokCSi3")));
 	}
+	
+	@Test
+	public void getAssetsBySpace_SpaceNotFound() throws Exception {
+		given(mockAssetService.getAllAssetsBySpace("yadj1kx9rmg0123"))
+		.willThrow(new ItemNotFoundException(Type.SPACE.getType() + " not found."));
+
+		mockMvc.perform(get("/spaces/yadj1kx9rmg0123/assets"))
+		.andExpect(status().is(404))
+		.andExpect(jsonPath("$.message", is("Space not found.")));
+	}
 
 	@Test
 	public void getAssetsBySpaceIdAndAssetId_Success() throws Exception {
@@ -141,7 +181,17 @@ public class SpaceControllerTest {
 	}
 
 	@Test
-	public void getAssetsBySpaceIdAndAssetId_NotFound() throws Exception {
+	public void getAssetsBySpaceIdAndAssetId_SpaceNotFound() throws Exception {
+		given(mockAssetService.getAssetBySpaceIdAndAssetId("yadj1kx9rmg0123", "wtrHxeu3zEoEce2MokCSi11"))
+		.willThrow(new ItemNotFoundException(Type.SPACE.getType() + " not found."));
+
+		mockMvc.perform(get("/spaces/yadj1kx9rmg0123/assets/wtrHxeu3zEoEce2MokCSi11"))
+		.andExpect(status().is(404))
+		.andExpect(jsonPath("$.message", is("Space not found.")));
+	}
+	
+	@Test
+	public void getAssetsBySpaceIdAndAssetId_AssetNotFound() throws Exception {
 		given(mockAssetService.getAssetBySpaceIdAndAssetId("yadj1kx9rmg0", "wtrHxeu3zEoEce2MokCSi11"))
 		.willThrow(new ItemNotFoundException(Type.ASSET.getType() + " not found."));
 

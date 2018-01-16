@@ -14,6 +14,7 @@ import com.exercise.item.Item;
  * 
  * This is the AssetBuilder class that is responsible for building an Asset instance.
  * 
+ * @author arao
  */
 public class AssetBuilder implements Builder {
 	

@@ -9,6 +9,7 @@ import com.exercise.base.Sys;
  * Depending on the caller, today, it could be either a Space, an Entry, an Asset or a User item.
  * This makes it easy to add a new type by writing a new builder.
  *
+ * @author arao
  */
 public class Item {
 	private Field fields;

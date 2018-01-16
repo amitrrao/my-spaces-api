@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * 
  * Role is an enum representing all possible roles for a 'User'.
  *
+ * @author arao
  */
 public enum Role {
 	

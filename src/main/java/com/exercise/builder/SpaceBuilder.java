@@ -14,6 +14,7 @@ import com.exercise.item.Item;
  * 
  * This is the SpaceBuilder class that is responsible for building a Space instance.
  *
+ * @author arao
  */
 public class SpaceBuilder implements Builder{
 	

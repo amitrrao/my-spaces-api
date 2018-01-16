@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
  * This class also has a static inner class called FieldBuilder that builds a Field instance.
  * Hence, this class contains only getters for the instance variables.
  * 
+ * @author arao
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Field {

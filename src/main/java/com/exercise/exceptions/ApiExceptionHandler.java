@@ -13,6 +13,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
  * 
  * ApiExceptionHandler is a generic exception handler class to handle different types of exceptions.
  *
+ * @author arao
  */
 @Order(Ordered.HIGHEST_PRECEDENCE)
 @ControllerAdvice

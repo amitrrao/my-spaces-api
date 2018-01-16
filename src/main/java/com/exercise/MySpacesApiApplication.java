@@ -7,6 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * 
  * This is the entry point into this Spring boot API.
  *
+ * @author arao
+ * 
  */
 @SpringBootApplication
 public class MySpacesApiApplication {

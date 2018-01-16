@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * 
  * Type is an enum representing all possible types for a 'Item'.
  *
+ * @author arao
  */
 public enum Type {
 	

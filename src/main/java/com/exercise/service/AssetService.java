@@ -19,6 +19,7 @@ import com.exercise.item.Item;
  * These methods are invoked from a controller.
  * Currently all the data comes from the TestData class. In production, it will come from a database.
  * 
+ * @author arao
  */
 @Service
 public class AssetService {

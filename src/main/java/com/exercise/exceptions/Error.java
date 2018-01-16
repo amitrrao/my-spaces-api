@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
  * 
  * Error is a generic class that is created to handle invalid requests.
  *
+ * @author arao
  */
 public class Error {
 

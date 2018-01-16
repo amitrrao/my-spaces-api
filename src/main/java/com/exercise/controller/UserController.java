@@ -18,6 +18,7 @@ import com.exercise.service.UserService;
  * This is a User Controller class that maps incoming REST calls to appropriate User service methods.
  * It injects a userService singleton for the service instances and calls methods on them based on the request mapping.
  * 
+ * @author arao
  */
 @RestController
 public class UserController {

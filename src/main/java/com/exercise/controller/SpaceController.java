@@ -23,6 +23,7 @@ import com.exercise.service.SpaceService;
  * This is a Space Controller class that maps incoming REST calls to appropriate service methods.
  * It injects singletons for the service instances and calls methods on them based on the request mapping.
  * 
+ * @author arao
  */
 @RestController
 public class SpaceController implements ErrorController {

@@ -5,6 +5,7 @@ package com.exercise.exceptions;
  * 
  * ItemNotFoundException is a specific instance of an exception that gets created when a requested item is not found in the system.
  *
+ * @author arao
  */
 public class ItemNotFoundException extends Exception {
 	

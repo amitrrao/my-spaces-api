@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
  * This class also has a static inner class called SysBuilder that builds a Sys instance.
  * Hence, this class contains only getters for the instance variables.
  * 
+ * @author arao
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Sys {

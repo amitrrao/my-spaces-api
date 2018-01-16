@@ -14,6 +14,7 @@ import com.exercise.item.Item;
  * 
  * This is the EntryBuilder class that is responsible for building an Entry instance.
  *
+ * @author arao
  */
 public class EntryBuilder implements Builder {
 	

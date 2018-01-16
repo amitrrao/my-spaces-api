@@ -18,8 +18,8 @@ import com.exercise.item.Item;
  * These methods are invoked from a controller.
  * Currently all the data comes from the TestData class. In production, it will come from a database.
  * 
+ * @author arao
  */
-
 @Service
 public class SpaceService {
 	
@@ -57,6 +57,12 @@ public class SpaceService {
 		}
 	}
 	
+	/**
+	 * Helper method to check if a spaceId is valid.
+	 * 
+	 * @param spaceId The space id.
+	 * @return true if a Space with the space Id was found; false otherwise.
+	 */
 	public boolean isValidSpaceId(String spaceId) {
 		return TestData.SPACES.stream().filter(s -> s.getSys().getId().equals(spaceId)).count() == 1;
 	}
