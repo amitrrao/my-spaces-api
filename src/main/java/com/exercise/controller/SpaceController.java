@@ -50,7 +50,7 @@ public class SpaceController implements ErrorController {
 	}
 	
 	@RequestMapping("/spaces/{spaceId}/entries")
-	public List<Item> getAllEntriesBySpace(@PathVariable(required = true) String spaceId) {
+	public List<Item> getAllEntriesBySpace(@PathVariable(required = true) String spaceId) throws ItemNotFoundException {
 		List<Item> entries = entryService.getAllEntriesBySpace(spaceId);
 		logger.info(String.format("Total number of entries: %d", entries.size()));
 		return entries;
@@ -62,7 +62,7 @@ public class SpaceController implements ErrorController {
 	}
 	
 	@RequestMapping("/spaces/{spaceId}/assets")
-	public List<Item> getAllAssetsBySpace(@PathVariable(required = true) String spaceId) {
+	public List<Item> getAllAssetsBySpace(@PathVariable(required = true) String spaceId) throws ItemNotFoundException {
 		List<Item> assets = assetService.getAllAssetsBySpace(spaceId);
 		logger.info(String.format("Total number of assets: %d", assets.size()));
 		return assets;

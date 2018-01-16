@@ -56,4 +56,8 @@ public class SpaceService {
 			throw new ItemNotFoundException(Type.SPACE.getType() + " not found.");
 		}
 	}
+	
+	public boolean isValidSpaceId(String spaceId) {
+		return TestData.SPACES.stream().filter(s -> s.getSys().getId().equals(spaceId)).count() == 1;
+	}
 }
