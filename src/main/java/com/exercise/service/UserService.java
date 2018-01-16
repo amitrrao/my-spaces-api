@@ -14,8 +14,9 @@ import com.exercise.item.Item;
 
 /**
  * 
- * UserService is a service class that implements REST methods for User related information.
- * All the data for this class is coming from TestData. In production, it would ideally come from a database.
+ * UserService is a service class that implements methods to fetch User related information.
+ * These methods are invoked from a controller.
+ * Currently all the data comes from the TestData class. In production, it will come from a database.
  * 
  */
 @Service
@@ -50,7 +51,6 @@ public class UserService {
 					.findFirst()
 					.get();
 			return user;
-			//System.out.println("Done finding user");
 		} catch(NoSuchElementException nsee) {
 			throw new ItemNotFoundException(Type.USER.getType() + " not found.");
 		}

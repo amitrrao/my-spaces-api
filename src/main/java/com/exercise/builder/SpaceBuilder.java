@@ -12,7 +12,7 @@ import com.exercise.item.Item;
 
 /**
  * 
- * This is the SpaceBuilder class that is responsible for building an Space instance.
+ * This is the SpaceBuilder class that is responsible for building a Space instance.
  *
  */
 public class SpaceBuilder implements Builder{

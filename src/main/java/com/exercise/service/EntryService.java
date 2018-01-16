@@ -14,10 +14,12 @@ import com.exercise.item.Item;
 
 /**
  * 
- * EntryService is a service class that implements REST methods for Entry related information.
- * All the data for this class is coming from TestData. In production, it would ideally come from a database.
+ * EntryService is a service class that implements methods to fetch Entry related information.
+ * These methods are invoked from a controller.
+ * Currently all the data comes from the TestData class. In production, it will come from a database.
  * 
  */
+
 @Service
 public class EntryService {
 

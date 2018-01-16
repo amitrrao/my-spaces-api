@@ -7,10 +7,10 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 
 /**
  * 
- * This is a Sys class, that contains all the system specific information for an Item in our API.
+ * This is a Sys class, that contains meta data for an Item in our API.
  *
  * This class also has a static inner class called SysBuilder that builds a Sys instance.
- * Hence, there are only getters for the instance variables.
+ * Hence, this class contains only getters for the instance variables.
  * 
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
