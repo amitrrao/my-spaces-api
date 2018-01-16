@@ -5,7 +5,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
@@ -71,10 +70,10 @@ public class SpaceControllerTest {
 	
 	@Test
 	public void getSpace_NotFound() throws Exception {
-		given(mockSpaceService.getSpace("yadj1kx9rmg01"))
+		given(mockSpaceService.getSpace("yadj1kx9rmg011"))
 		.willThrow(new ItemNotFoundException(Type.SPACE.getType() + " not found."));
 		
-		mockMvc.perform(get("/spaces/yadj1kx9rmg01"))
+		mockMvc.perform(get("/spaces/yadj1kx9rmg011"))
 		.andExpect(status().is(404))
 		.andExpect(jsonPath("$.message", is("Space not found.")));
 	}
@@ -140,7 +139,6 @@ public class SpaceControllerTest {
 		.andExpect(jsonPath("$.fields.title", is("Hero Collaboration Partial")))
 		.andExpect(jsonPath("$.sys.id", is("wtrHxeu3zEoEce2MokCSi1")));
 	}
-	
 
 	@Test
 	public void getAssetsBySpaceIdAndAssetId_NotFound() throws Exception {
@@ -152,11 +150,9 @@ public class SpaceControllerTest {
 		.andExpect(jsonPath("$.message", is("Asset not found.")));
 	}
 	
-	//TODO: what to expect here?
 	@Test
 	public void testInvalidUrl() throws Exception {
 		mockMvc.perform(get("/spac"))
-		.andExpect(status().is(404)); // TODO: 404? or 400?
+		.andExpect(status().is(404)); 
 	}
-	
 }
